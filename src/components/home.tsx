@@ -24,6 +24,7 @@ const Home:React.FC<WindowWidthProps> = ({ windowWidth }) => {
 const RoomCarousel:React.FC<WindowWidthProps> = ({ windowWidth }) => {
     return (
       <div>
+      <h1 className="display-2" style={{ color: '#f8f9fa', textAlign: 'center', marginTop: 40}}>Rooms</h1>
       <Carousel style={{ width: windowWidth > 900 ? '900px' : '400px', paddingTop: 50 }}>
         <Carousel.Item style={{ height: windowWidth > 900 ? '700px' : '310px' }}>
           <img

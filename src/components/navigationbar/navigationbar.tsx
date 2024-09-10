@@ -6,6 +6,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Button from 'react-bootstrap/Button';
 
+import useScrollPosition from '../../helpers/useScrollPosition';
 import video from '../../videos/jungle2.mp4';
 import '../../videos/video.css';
 import '../../styles/NavigationBarContent.css';
@@ -33,7 +34,7 @@ const NavigationBar: React.FC<WindowWidthProps> = ({ windowWidth }) => {
 
 const NavigationBarContent: React.FC<WindowWidthProps> = ({ windowWidth }) => {
   // koska NavBar onToggle ei toimi odotetusti niin täytyy selvittää manuaalisesti näytön leveys
-  //const windowWidth = useWidth();
+  const scrollPosition = useScrollPosition();
 
   const [showTrekMenu, setShowTrekMenu] = useState(false);
   const [showRoomMenu, setShowRoomMenu] = useState(false);
@@ -43,11 +44,11 @@ const NavigationBarContent: React.FC<WindowWidthProps> = ({ windowWidth }) => {
     <Styles />
     <Navbar 
       fixed="top"
-      bg="transparent"
+      //bg="transparent"
       expand="xl" 
       variant="dark" 
-      className="navbar-custom"
-      style={{ paddingLeft: 20, paddingRight: 20, paddingTop: 20}}
+      //className="navbar-custom"
+      style={{ paddingLeft: 20, paddingRight: 20, paddingTop: 20, background: scrollPosition < 550 ? 'transparent' : '#2F4F4F', borderBottom: '1px solid #f8f9fa'}}
     >
       <Container fluid>
         <Navbar.Brand className="text-light">
