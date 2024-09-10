@@ -17,7 +17,7 @@
     z-index: -1;
     transform: translate(-50%, -50%);
     background-size: cover;
-    filter: brightness(90%); /* Lisää tummuutta videon päälle paremman luettavuuden takaamiseksi */
+    filter: brightness(70%); /* Lisää tummuutta videon päälle paremman luettavuuden takaamiseksi */
   }
   
   .content-overlay {

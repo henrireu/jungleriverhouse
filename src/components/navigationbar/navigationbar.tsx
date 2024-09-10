@@ -6,15 +6,17 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Button from 'react-bootstrap/Button';
 
-import useWidth from "../../helpers/useWidth";
-
 import video from '../../videos/jungle2.mp4';
 import '../../videos/video.css';
 import '../../styles/NavigationBarContent.css';
 import '../../index.css';
 import logo from '../../images/logo.jpg';
 
-const NavigationBar = () => {
+interface WindowWidthProps {
+  windowWidth: number;
+}
+
+const NavigationBar: React.FC<WindowWidthProps> = ({ windowWidth }) => {
 
   return (
     <div className="video-container">
@@ -23,15 +25,15 @@ const NavigationBar = () => {
           Your browser does not support the video tag.
       </video>
       <div className="content-overlay">
-        <NavigationBarContent />
+        <NavigationBarContent windowWidth={windowWidth}/>
       </div>
     </div>
   )
 }
 
-const NavigationBarContent = () => {
+const NavigationBarContent: React.FC<WindowWidthProps> = ({ windowWidth }) => {
   // koska NavBar onToggle ei toimi odotetusti niin täytyy selvittää manuaalisesti näytön leveys
-  const windowWidth = useWidth();
+  //const windowWidth = useWidth();
 
   const [showTrekMenu, setShowTrekMenu] = useState(false);
   const [showRoomMenu, setShowRoomMenu] = useState(false);
