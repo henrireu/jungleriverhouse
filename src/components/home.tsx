@@ -1,7 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import blackGibbonRoom from '../images/black-gibbon-room.jpg';
 import familyRoom from '../images/family-room.webp';
-import orangutanRoom from '../images/orangutan-room.jpg';
+//import orangutanRoom from '../images/orangutan-room.jpg';
 
 const Home = () => {
   return (
