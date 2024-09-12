@@ -23,6 +23,8 @@ interface WindowWidthProps {
   windowWidth: number;
 }
 
+// seuraavaksi vaihda että Roomit näkyvät aina eikä teksti ja laita Cards siten että ne ei mene rikki kun näyttö pienenee
+
 const NavigationBar: React.FC<WindowWidthProps> = ({ windowWidth }) => {
 
   return (
@@ -105,7 +107,7 @@ const NavigationBarContent: React.FC<WindowWidthProps> = ({ windowWidth }) => {
       fixed="top"
       expand="xl" 
       variant="dark" 
-      style={{ paddingLeft: 20, paddingRight: 20, paddingTop: 20, background: scrollPosition < 140 ? 'transparent' : '#2F4F4F', borderBottom: '1px solid #f8f9fa' }}
+      style={{ paddingLeft: 20, paddingRight: 20, paddingTop: 20, background: scrollPosition < 110 ? 'transparent' : '#2F4F4F', borderBottom: '1px solid #f8f9fa' }}
     >
       <Container fluid>
         <Navbar.Brand className="text-light">

@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import blackGibbonRoom from '../images/black-gibbon-room.jpg';
 import familyRoom from '../images/family-room.webp';
@@ -5,12 +6,12 @@ import orangutanRoom from '../images/orangutan-room.jpg';
 
 interface WindowWidthProps {
   windowWidth: number;
-}
+} 
 
 const Home:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   return (
     <div
-      style={{ backgroundColor: '#2E8B57', minHeight: '100vh', display: 'flex', justifyContent: 'center' }}
+      style={{ backgroundColor: '#004D40', minHeight: '100vh', display: 'flex', justifyContent: 'center' }}
     >
       <RoomCarousel windowWidth={windowWidth}/>
     </div>
@@ -23,10 +24,22 @@ const Home:React.FC<WindowWidthProps> = ({ windowWidth }) => {
 };*/
 
 const RoomCarousel:React.FC<WindowWidthProps> = ({ windowWidth }) => {
+  const [width, setWidth] = useState<string>('');
+
+  useEffect(() => {
+    if(windowWidth > 900) {
+      setWidth('900px');
+    } else if (windowWidth > 610) {
+      setWidth('600px');
+    } else {
+      setWidth('300px');
+    }
+  },[windowWidth]);
+
     return (
       <div>
       <h1 className="display-2" style={{ color: '#f8f9fa', textAlign: 'center', marginTop: 40}}>Rooms</h1>
-      <Carousel style={{ width: windowWidth > 900 ? '900px' : '400px', paddingTop: 50 }}>
+      <Carousel style={{ width: `${width}`, paddingTop: 50 }}>
         <Carousel.Item style={{ height: windowWidth > 900 ? '700px' : '310px' }}>
           <img
             className="d-block w-100"
