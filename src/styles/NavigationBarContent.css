@@ -1,7 +1,15 @@
 .menu-container {
-    position: relative;
-  }
+  position: relative;
+}
   
-  .menu-container:hover .MuiPaper-root {
-    display: block;
-  }
+.menu-container:hover .MuiPaper-root {
+  display: block;
+}
+
+.video-room-card:hover{
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+

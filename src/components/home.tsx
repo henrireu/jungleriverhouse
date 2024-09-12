@@ -17,6 +17,7 @@ const Home:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   )
 }
 
+
 /*const carouselItemStyle = {
     height: '700px'
 };*/

@@ -1,8 +1,8 @@
-import NavigationBar from "./components/navigationbar/navigationbar";
+import NavigationBar from "./components/navigationbar";
 
 import useWidth from "./helpers/useWidth";
 
-import Home from "./components/home";
+//import Home from "./components/home";
 
 const App = () => {
   const windowWidth = useWidth();
@@ -10,7 +10,7 @@ const App = () => {
   return (
     <>
       <NavigationBar windowWidth={windowWidth}/>
-      <Home windowWidth={windowWidth}/>
+      {/*<Home windowWidth={windowWidth}/>*/}
     </>
   )
 }
