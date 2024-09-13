@@ -29,11 +29,7 @@ const NavigationBar: React.FC<WindowWidthProps> = ({ windowWidth }) => {
 
   return (
     <div className="video-container">
-      {/*<video className="video-bg" autoPlay loop muted>
-        <source src={video} type="video/mp4" />
-          Your browser does not support the video tag.
-      </video>*/}
-
+      {/* reactissa on jokin bugi ja video täytyy tehdä tällä tavalla jotta se toimii myös puhelimella */}
       <div dangerouslySetInnerHTML={{ __html: `
         <video
           loop
@@ -119,7 +115,9 @@ const NavigationBarContent: React.FC<WindowWidthProps> = ({ windowWidth }) => {
       fixed="top"
       expand="xl" 
       variant="dark" 
-      style={{ paddingLeft: 20, paddingRight: 20, paddingTop: 20, background: scrollPosition < 110 ? 'transparent' : '#2F4F4F', borderBottom: '1px solid #f8f9fa' }}
+      className="navbar-custom"
+      style={{ background: scrollPosition < 110 ? 'transparent' : '#2F4F4F' }}
+      
     >
       <Container fluid>
         <Navbar.Brand className="text-light">
@@ -134,7 +132,7 @@ const NavigationBarContent: React.FC<WindowWidthProps> = ({ windowWidth }) => {
           JUNGLE RIVER HOUSE
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse className="justify-content-center" style={{ backgroundColor: windowWidth <= 1200 ? '#343a40' : 'transparent', width: "100%", marginTop: 10 }}>
+        <Navbar.Collapse className="justify-content-center z-index1090" style={{ backgroundColor: windowWidth < 1200 ? '#343a40' : 'transparent', width: "100%", marginTop: 10 }}>
           <Nav /*className="me-auto"*/>
             <Button variant="flat" size='lg'>Home</Button>
             <Button variant="flat" size='lg'>About us</Button>
@@ -187,7 +185,7 @@ const NavigationBarContent: React.FC<WindowWidthProps> = ({ windowWidth }) => {
     </>
   )
 }
-
+{/*style={{ paddingLeft: 20, paddingRight: 20, paddingTop: 20, background: scrollPosition < 110 ? 'transparent' : '#2F4F4F', borderBottom: '1px solid #f8f9fa', zIndex: 1090 }}*/}
 // tässä yliajetaan bootstrap variantin teemaa..
 
 const Styles = () => {
@@ -203,6 +201,18 @@ const Styles = () => {
 
           .btn-flat:hover {
             background-color: #212529;
+          }
+
+          .navbar-custom {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 20px;
+            border-bottom: 1px solid #f8f9fa;
+            z-index: 1090 !important;
+          }
+
+          .z-index1090 {
+            z-index:1090 !important;
           }
         `}
       </style>
