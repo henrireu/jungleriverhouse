@@ -1,13 +1,16 @@
-import { useState, useEffect } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
 import blackGibbonRoom from '../images/black-gibbon-room.jpg';
-import familyRoom from '../images/family-room.webp';
+import familyRoom2 from '../images/familyroom2.jpg';
 import orangutanRoom from '../images/orangutan-room.jpg';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 import bukitImage from '../images/jungle-river-house-bukit.jpg';
+
+import HomeRoom from './home/homeRoom';
 
 interface WindowWidthProps {
   windowWidth: number;
@@ -29,15 +32,35 @@ const Home:React.FC<WindowWidthProps> = ({ windowWidth }) => {
         <IntroductionTextCard />
       </div>
       <RoomsSection />
-      <RoomCarousel windowWidth={windowWidth}/>
+      {/*<RoomCarousel windowWidth={windowWidth}/>*/}
     </div>
   )
 }
 
+// tee tuo kuntoon että kaikki huoneet on keskellä vaikka ei oo vierekkäin
+
 const RoomsSection = () => {
   return (
-    <div style={{ minHeight: '100vh', width: '100%', background: '#00695C', display: 'flex', justifyContent: 'center', paddingTop: 100 }}>
+    <div style={{ minHeight: '100vh', width: '100%', background: '#00695C', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: 100 }}>
       <h1 className="display-1 text-light">Huoneet</h1>
+      {/*<div style={{ padding: 50, display: 'flex', gap: 50}}>
+        <HomeRoom name="Blackgibbon Huone" img={blackGibbonRoom} price={"31-36"}/>
+        <HomeRoom name="Perhehuone" img={familyRoom2} price={"78-90"}/>
+        <HomeRoom name="Orangutan Huone" img={orangutanRoom} price={"31-36"}/>
+      </div>*/}
+      <Container style={{padding: 20}}>
+        <Row>
+          <Col xs={12} xl={6} xxl={4}>
+            <HomeRoom name="Blackgibbon Huone" img={blackGibbonRoom} price={"31-36"}/>
+          </Col>
+          <Col xs={12} xl={6} xxl={4}>
+            <HomeRoom name="Perhehuone" img={familyRoom2} price={"78-90"}/>
+          </Col>
+          <Col xs={12} xl={6} xxl={4}>
+            <HomeRoom name="Orangutan Huone" img={orangutanRoom} price={"31-36"}/>
+          </Col>
+        </Row>
+      </Container>
     </div>
   )
 }
@@ -72,7 +95,7 @@ const IntroductionTextCard = () => {
     height: '700px'
 };*/
 
-const RoomCarousel:React.FC<WindowWidthProps> = ({ windowWidth }) => {
+/*const RoomCarousel:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   const [width, setWidth] = useState<string>('');
 
   useEffect(() => {
@@ -128,6 +151,6 @@ const RoomCarousel:React.FC<WindowWidthProps> = ({ windowWidth }) => {
       </Carousel>
       </div>
     );
-  };
+  };*/
 
 export default Home;
