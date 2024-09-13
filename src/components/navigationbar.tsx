@@ -29,10 +29,22 @@ const NavigationBar: React.FC<WindowWidthProps> = ({ windowWidth }) => {
 
   return (
     <div className="video-container">
-      <video className="video-bg" autoPlay loop muted>
+      {/*<video className="video-bg" autoPlay loop muted>
         <source src={video} type="video/mp4" />
           Your browser does not support the video tag.
-      </video>
+      </video>*/}
+
+      <div dangerouslySetInnerHTML={{ __html: `
+        <video
+          loop
+          muted
+          autoplay
+          playsinline
+          src="${video}"
+          class="video-bg"
+        />,
+      ` }}></div>
+      
       <div className="content-overlay">
         <NavigationBarContent windowWidth={windowWidth}/>
         <div style={{marginTop: 170, display: 'flex', gap: 300}}>
