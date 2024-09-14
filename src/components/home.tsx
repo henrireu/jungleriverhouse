@@ -31,7 +31,7 @@ const Home:React.FC<WindowWidthProps> = ({ windowWidth }) => {
         )}
         <IntroductionTextCard />
       </div>
-      <RoomsSection />
+      <RoomsSection windowWidth={windowWidth}/>
       {/*<RoomCarousel windowWidth={windowWidth}/>*/}
     </div>
   )
@@ -39,25 +39,25 @@ const Home:React.FC<WindowWidthProps> = ({ windowWidth }) => {
 
 // tee tuo kuntoon että kaikki huoneet on keskellä vaikka ei oo vierekkäin
 
-const RoomsSection = () => {
+const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   return (
-    <div style={{ minHeight: '100vh', width: '100%', background: '#00695C', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: 100 }}>
-      <h1 className="display-1 text-light">Huoneet</h1>
+    <div style={{ minHeight: '100vh', width: '100%', background: '#00695C', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <h1 className="display-1 text-light" style={{ marginTop: 50, marginBottom: 50}}>Huoneet</h1>
       {/*<div style={{ padding: 50, display: 'flex', gap: 50}}>
         <HomeRoom name="Blackgibbon Huone" img={blackGibbonRoom} price={"31-36"}/>
         <HomeRoom name="Perhehuone" img={familyRoom2} price={"78-90"}/>
         <HomeRoom name="Orangutan Huone" img={orangutanRoom} price={"31-36"}/>
       </div>*/}
-      <Container style={{padding: 20}}>
-        <Row>
-          <Col xs={12} xl={6} xxl={4}>
-            <HomeRoom name="Blackgibbon Huone" img={blackGibbonRoom} price={"31-36"}/>
+      <Container>
+        <Row xs={1} lg={2} xl={3} className="g-4 justify-content-md-center">
+          <Col>
+            <HomeRoom name="Blackgibbon Huone" img={blackGibbonRoom} price={"31-36"} windowWidth={windowWidth}/>
           </Col>
-          <Col xs={12} xl={6} xxl={4}>
-            <HomeRoom name="Perhehuone" img={familyRoom2} price={"78-90"}/>
+          <Col>
+            <HomeRoom name="Perhehuone" img={familyRoom2} price={"78-90"} windowWidth={windowWidth}/>
           </Col>
-          <Col xs={12} xl={6} xxl={4}>
-            <HomeRoom name="Orangutan Huone" img={orangutanRoom} price={"31-36"}/>
+          <Col>
+            <HomeRoom name="Orangutan Huone" img={orangutanRoom} price={"31-36"} windowWidth={windowWidth}/>
           </Col>
         </Row>
       </Container>
