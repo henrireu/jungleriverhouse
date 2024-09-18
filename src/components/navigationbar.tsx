@@ -92,7 +92,7 @@ const RoomCardGroup = () => {
 
 const TextCard = () => {
   return (
-    <Card className="text-center bg-transparent " style={{ width: '20rem' }}>
+    <Card className="text-center bg-transparent " style={{ width: '20rem', border: 'none' }}>
       <Card.Body>
         <Card.Text className="fs-2" style={{ color: 'rgba(255, 255, 255, 0.5)' }}>
           Koe unohtumaton kokemus Jungle River Housessa
