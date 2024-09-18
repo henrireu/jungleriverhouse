@@ -10,7 +10,8 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 import useScrollPosition from '../helpers/useScrollPosition';
-import video from '../videos/jungle2.mp4';
+//import video from '../videos/jungle2.mp4';
+import video from '../videos/background.mp4';
 import '../styles/video.css';
 import '../styles/NavigationBarContent.css';
 import logo from '../images/logo.jpg';
@@ -18,12 +19,13 @@ import logo from '../images/logo.jpg';
 import blackGibbonRoom from '../images/black-gibbon-room.jpg';
 import familyRoom from '../images/family-room.webp';
 import orantuganRoom from '../images/orangutan-room.jpg';
+import poster from '../images/junglePoster.jpg';
 
 interface WindowWidthProps {
   windowWidth: number;
 }
 
-// seuraavaksi vaihda että Roomit näkyvät aina eikä teksti ja laita Cards siten että ne ei mene rikki kun näyttö pienenee
+// poster kuva täytyy vaihtaa vielä. eli kuva mikä näkyy kun videota vielä ladataan..
 
 const NavigationBar: React.FC<WindowWidthProps> = ({ windowWidth }) => {
 
@@ -36,6 +38,7 @@ const NavigationBar: React.FC<WindowWidthProps> = ({ windowWidth }) => {
           muted
           autoplay
           playsinline
+          poster="${poster}"
           src="${video}"
           class="video-bg"
         />,
