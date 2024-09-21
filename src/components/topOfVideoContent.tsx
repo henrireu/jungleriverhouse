@@ -24,7 +24,7 @@ const TopOfVideoContent:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   return (
     <div>
       { currentPath === '/' ? (
-        <HomeContent windowWidth={windowWidth} />
+        <HomeContent  />
       ) : currentPath === '/rooms' ? (
         <RoomsContent windowWidth={windowWidth} />
       ) : (
@@ -45,7 +45,7 @@ const RoomsContent:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   )
 }
 
-const HomeContent:React.FC<WindowWidthProps> = ({ windowWidth }) => {
+const HomeContent:React.FC = () => {
     return (
         <div style={{ marginTop: 170, display: 'flex', gap: 300}}>
             <TextCard text="Koe unohtumaton kokemus Jungle River Housessa"/>
