@@ -11,6 +11,7 @@ import Col from 'react-bootstrap/Col';
 import bukitImage from '../images/jungle-river-house-bukit.jpg';
 
 import HomeRoom from './home/homeRoom';
+import RoomCarousel from './roomCarousel';
 
 interface WindowWidthProps {
   windowWidth: number;
@@ -36,7 +37,7 @@ const Home:React.FC<WindowWidthProps> = ({ windowWidth }) => {
         <IntroductionTextCard />
       </div>
       <RoomsSection windowWidth={windowWidth}/>
-      {/*<RoomCarousel windowWidth={windowWidth}/>*/}
+      <RoomCarousel />
     </div>
   )
 }
