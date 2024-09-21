@@ -16,6 +16,10 @@ interface WindowWidthProps {
   windowWidth: number;
 } 
 
+//navigointipalkki hyppii jos toisella sivulla ei ole alasvieritys palkkia ja toisella on...
+//Ongelma johtuu siitä sivupalkista mistä rullataan alaspäin mikä tulee tällä hetkellä vain home komponenttiin
+
+
 const Home:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   return (
     <div
@@ -49,7 +53,7 @@ const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
         <HomeRoom name="Orangutan Huone" img={orangutanRoom} price={"31-36"}/>
       </div>*/}
       <Container>
-        <Row xs={1} lg={2} xl={3} className="g-4 justify-content-md-center">
+        <Row xs={1} lg={2} xl={3} /*className="g-4 justify-content-md-center"*/>
           <Col>
             <HomeRoom name="Blackgibbon Huone" img={blackGibbonRoom} price={"31-36"} windowWidth={windowWidth}/>
           </Col>
@@ -68,7 +72,7 @@ const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
 
 const IntroductionTextCard = () => {
   return (
-    <Card className="text-center" bg="success" text="light" style={{}}>
+    <Card className="text-center" bg="success" text="light" style={{ }}>
       <Card.Body>
         <Card.Title className="fs-1" style={{ marginBottom: 50}}>Moi!</Card.Title>
         <Card.Title className="fs-3" style={{ marginBottom: 50}}>TERVETULOA!</Card.Title>

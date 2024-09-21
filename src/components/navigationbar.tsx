@@ -5,21 +5,12 @@ import Nav from 'react-bootstrap/Nav';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+import { Link } from 'react-router-dom';
 
 import useScrollPosition from '../helpers/useScrollPosition';
-//import video from '../videos/jungle2.mp4';
-import video from '../videos/background.mp4';
-import '../styles/video.css';
 import '../styles/NavigationBarContent.css';
 import logo from '../images/logo.jpg';
 
-import blackGibbonRoom from '../images/black-gibbon-room.jpg';
-import familyRoom from '../images/family-room.webp';
-import orantuganRoom from '../images/orangutan-room.jpg';
-import poster from '../images/junglePoster.jpg';
 
 interface WindowWidthProps {
   windowWidth: number;
@@ -28,77 +19,16 @@ interface WindowWidthProps {
 // poster kuva täytyy vaihtaa vielä. eli kuva mikä näkyy kun videota vielä ladataan..
 
 const NavigationBar: React.FC<WindowWidthProps> = ({ windowWidth }) => {
-
   return (
-    <div className="video-container">
-      {/* reactissa on jokin bugi ja video täytyy tehdä tällä tavalla jotta se toimii myös puhelimella */}
-      <div dangerouslySetInnerHTML={{ __html: `
-        <video
-          loop
-          muted
-          autoplay
-          playsinline
-          poster="${poster}"
-          src="${video}"
-          class="video-bg"
-        />,
-      ` }}></div>
-      
-      <div className="content-overlay">
-        <NavigationBarContent windowWidth={windowWidth}/>
-        <div style={{marginTop: 170, display: 'flex', gap: 300}}>
-          <TextCard />
-          {windowWidth > 950 && (
-            <RoomCardGroup />
-          )}
-        </div>
-      </div>
-    </div>
-  )
-}
-
-const RoomCardGroup = () => {
-    const rooms = [
-      { id: 1, name: 'Orantugan Room', image: orantuganRoom },
-      { id: 2, name: 'Family Room', image: familyRoom },
-      { id: 3, name: 'Black Gibbon Room', image: blackGibbonRoom }
-    ];
-  
-    return (
-      <Container style={{ width: 300}}>
-        {rooms.map(room => (
-          <div key={room.id} className="video-room-card">
-          <Card className="mb-3" style={{ height: 80, background: 'rgba(255, 255, 255, 0.1)', borderRadius: 8 }}>
-            <Row >
-              <Col md={4}>
-                <Card.Img 
-                  src={room.image} 
-                  alt={`${room.name} image`} 
-                  style={{ height: 60, width: 70, objectFit: 'cover', margin: '10px' }}
-                />
-              </Col>
-              <Col md={8}>
-                <Card.Body>
-                  <Card.Title style={{ color: 'rgba(255, 255, 255, 0.5)'}}>{room.name}</Card.Title>
-                </Card.Body>
-              </Col>
-            </Row>
-          </Card>
-          </div>
-        ))}
-      </Container>
-    );
-  };
-
-const TextCard = () => {
-  return (
-    <Card className="text-center bg-transparent " style={{ width: '20rem', border: 'none' }}>
-      <Card.Body>
-        <Card.Text className="fs-2" style={{ color: 'rgba(255, 255, 255, 0.5)' }}>
-          Koe unohtumaton kokemus Jungle River Housessa
-        </Card.Text>
-      </Card.Body>
-    </Card>
+    <>
+      <NavigationBarContent windowWidth={windowWidth}/>
+      {/*<div style={{marginTop: 170, display: 'flex', gap: 300}}>
+        <TextCard />
+        {windowWidth > 950 && (
+          <RoomCardGroup />
+        )}
+      </div>*/}
+    </>
   )
 }
 
@@ -137,26 +67,35 @@ const NavigationBarContent: React.FC<WindowWidthProps> = ({ windowWidth }) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-center z-index1090" style={{ backgroundColor: windowWidth < 1200 ? '#343a40' : 'transparent', width: "100%", marginTop: 10 }}>
           <Nav /*className="me-auto"*/>
-            <Button variant="flat" size='lg'>Home</Button>
-            <Button variant="flat" size='lg'>About us</Button>
-
+            <Link to="/" style={{ textDecoration: 'none', color: 'inherit'}}>
+              <Button variant="flat" size='lg'>Home</Button>
+            </Link>
+            <Link to="/about" style={{ textDecoration: 'none', color: 'inherit'}}>
+              <Button variant="flat" size='lg'>
+                About us
+              </Button>
+            </Link>
             {windowWidth > 1200 ? (
-              <DropdownButton 
-              id="dropdown-basic-button" 
-              size='lg'
-              title="Rooms" 
-              data-bs-theme="dark"
-              variant="flat"
-              show={showRoomMenu}
-              onMouseEnter={() => setShowRoomMenu(true)}
-              onMouseLeave={() => setShowRoomMenu(false)}
-            >
-              <Dropdown.Item>Orangutan Room</Dropdown.Item>
-              <Dropdown.Item>Black Gibbon Room</Dropdown.Item>
-              <Dropdown.Item>Family Room</Dropdown.Item>
-            </DropdownButton>
+              <Link to="/rooms" style={{ textDecoration: 'none', color: 'inherit'}}>
+                <DropdownButton 
+                  id="dropdown-basic-button" 
+                  size='lg'
+                  title="Rooms" 
+                  data-bs-theme="dark"
+                  variant="flat"
+                  show={showRoomMenu}
+                  onMouseEnter={() => setShowRoomMenu(true)}
+                  onMouseLeave={() => setShowRoomMenu(false)}
+                >
+                  <Dropdown.Item>Orangutan Room</Dropdown.Item>
+                  <Dropdown.Item>Black Gibbon Room</Dropdown.Item>
+                  <Dropdown.Item>Family Room</Dropdown.Item>
+                </DropdownButton>
+              </Link>
             ) : (
-              <Button variant="flat" size="lg">Rooms</Button>
+              <Link to="/rooms" style={{ textDecoration: 'none', color: 'inherit'}}>
+                <Button variant="flat" size="lg">Rooms</Button>
+              </Link>
             )}
 
             {windowWidth > 1200 ? (
