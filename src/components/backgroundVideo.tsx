@@ -4,8 +4,8 @@ import { useLocation } from "react-router-dom";
 import homeVideo from '../videos/background.mp4';
 import roomsVideo from '../videos/rooms-background3.mp4';
 
-import homePoster from '../images/homePoster.png';
-import roomsPoster from '../images/roomsPoster2.png';
+import homePoster from '../images/posters/homePoster.png';
+import roomsPoster from '../images/posters/roomsPoster.png';
 
 import '../styles/video.css';
 

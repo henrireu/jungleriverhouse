@@ -5,9 +5,9 @@ import "slick-carousel/slick/slick-theme.css";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-import blackGibbonRoom from '../images/black-gibbon-room.jpg';
-import familyRoom from '../images/familyroom2.jpg';
-import orangutanRoom from '../images/orangutan-room.jpg';
+import blackGibbonRoom from '../images/rooms/black-gibbon-room.jpg';
+import familyRoom from '../images/rooms/familyroom2.jpg';
+import orangutanRoom from '../images/rooms/orangutan-room.jpg';
 
 interface RoomCardProps {
   img: string;
@@ -22,6 +22,8 @@ const RoomCarousel = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
 
   return (

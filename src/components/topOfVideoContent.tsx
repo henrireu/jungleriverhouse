@@ -5,9 +5,9 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-import blackGibbonRoom from '../images/black-gibbon-room.jpg';
-import familyRoom from '../images/family-room.webp';
-import orantuganRoom from '../images/orangutan-room.jpg';
+import blackGibbonRoom from '../images/rooms/black-gibbon-room.jpg';
+import familyRoom from '../images/rooms/family-room.webp';
+import orantuganRoom from '../images/rooms/orangutan-room.jpg';
 
 interface WindowWidthProps {
   windowWidth: number;
