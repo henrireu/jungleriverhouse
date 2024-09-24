@@ -1,7 +1,5 @@
 import Card from "react-bootstrap/Card";
 
-import RoomCarousel from "../roomCarousel";
-
 const Rooms = () => {
   return (
     <div style={{ backgroundColor: '#00695C', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
