@@ -37,7 +37,6 @@ const Home:React.FC<WindowWidthProps> = ({ windowWidth }) => {
         <IntroductionTextCard />
       </div>
       <RoomsSection windowWidth={windowWidth}/>
-      <RoomCarousel />
     </div>
   )
 }
@@ -48,12 +47,8 @@ const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   return (
     <div style={{ minHeight: '100vh', width: '100%', background: '#00695C', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <h1 className="display-1 text-light" style={{ marginTop: 50, marginBottom: 50}}>Huoneet</h1>
-      {/*<div style={{ padding: 50, display: 'flex', gap: 50}}>
-        <HomeRoom name="Blackgibbon Huone" img={blackGibbonRoom} price={"31-36"}/>
-        <HomeRoom name="Perhehuone" img={familyRoom2} price={"78-90"}/>
-        <HomeRoom name="Orangutan Huone" img={orangutanRoom} price={"31-36"}/>
-      </div>*/}
-      <Container>
+      {windowWidth > 1200 ? (
+        <Container>
         <Row xs={1} lg={2} xl={3} /*className="g-4 justify-content-md-center"*/>
           <Col>
             <HomeRoom name="Blackgibbon Huone" img={blackGibbonRoom} price={"31-36"} windowWidth={windowWidth}/>
@@ -66,6 +61,9 @@ const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
           </Col>
         </Row>
       </Container>
+      ) : (
+        <RoomCarousel />
+      )}
     </div>
   )
 }

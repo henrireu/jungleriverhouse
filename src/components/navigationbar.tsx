@@ -16,18 +16,11 @@ interface WindowWidthProps {
   windowWidth: number;
 }
 
-// poster kuva täytyy vaihtaa vielä. eli kuva mikä näkyy kun videota vielä ladataan..
 
 const NavigationBar: React.FC<WindowWidthProps> = ({ windowWidth }) => {
   return (
     <>
       <NavigationBarContent windowWidth={windowWidth}/>
-      {/*<div style={{marginTop: 170, display: 'flex', gap: 300}}>
-        <TextCard />
-        {windowWidth > 950 && (
-          <RoomCardGroup />
-        )}
-      </div>*/}
     </>
   )
 }
@@ -127,7 +120,7 @@ const NavigationBarContent: React.FC<WindowWidthProps> = ({ windowWidth }) => {
     </>
   )
 }
-{/*style={{ paddingLeft: 20, paddingRight: 20, paddingTop: 20, background: scrollPosition < 110 ? 'transparent' : '#2F4F4F', borderBottom: '1px solid #f8f9fa', zIndex: 1090 }}*/}
+
 // tässä yliajetaan bootstrap variantin teemaa..
 
 const Styles = () => {

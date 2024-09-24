@@ -7,9 +7,6 @@ const Rooms = () => {
     <div style={{ backgroundColor: '#00695C', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
       <h1 className="display-1 text-light" style={{ paddingTop: 30 }}>Our Rooms</h1>
       <RoomDescriptionCard />
-      <div style={{ marginTop: 50}}>
-        <RoomCarousel />
-      </div>
       {/*testi divi*/}
       <div style={{ minHeight: '100vh', backgroundColor: 'green'}}>
       </div>
