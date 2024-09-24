@@ -22,7 +22,7 @@ const TopOfVideoContent:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   const currentPath = location.pathname;
 
   return (
-    <div>
+    <div style={{ display: 'flex', gap: 300, alignItems: 'center', justifyContent: 'center', height: '80vh'}}>
       { currentPath === '/' ? (
         <HomeContent  />
       ) : currentPath === '/rooms' ? (
@@ -36,7 +36,7 @@ const TopOfVideoContent:React.FC<WindowWidthProps> = ({ windowWidth }) => {
 
 const RoomsContent:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   return (
-    <div style={{ marginTop: 170, display: 'flex', gap: 300}}>
+    <div style={{ display: 'flex', gap: 300}}>
             <TextCard text="Upeita huoneita hienolla näköalalla"/>
             {windowWidth > 950 && (
               <RoomCardGroup />
@@ -47,7 +47,7 @@ const RoomsContent:React.FC<WindowWidthProps> = ({ windowWidth }) => {
 
 const HomeContent:React.FC = () => {
     return (
-        <div style={{ marginTop: 170, display: 'flex', gap: 300}}>
+        <div>
             <TextCard text="Koe unohtumaton kokemus Jungle River Housessa"/>
             {/*{windowWidth > 950 && (
               <RoomCardGroup />

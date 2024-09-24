@@ -2,7 +2,9 @@
     position: relative;
     width: 100%;
     max-width: 100vw;
-    height: 600px; /* Korkeus on 100% viewportin korkeudesta */
+    /*height: 600px;*/ 
+    height: 80vh;
+    object-fit: cover;
     overflow: hidden;
   }
   
