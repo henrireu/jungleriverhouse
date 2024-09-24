@@ -47,13 +47,13 @@ const JungleTrekCarousel = () => {
     };
   
     return (
-        <div style={{ width: '90%' }}>
+        <div style={{ width: '85%' }}>
           <Slider {...settings}>
             <TrekCard name="Helppo 3 tunnin viidakkoretki (sis koskenlasku)" img={bird} price="55" />
             <TrekCard name="Puolenpäivän viidakkoretki 6h (sis koskenlaskun)" img={blackmonkey} price="70" />
             <TrekCard name="Kahden päivän ja yhden yön viidakkoretki" img={tiger} price="120" />
             <TrekCard name="Kaksi yötä ja kolme päivää viidakossa" img={monkey} price="170" />
-            <TrekCard name="Erikoistarjous kahdelle henglelle - 1 yo huoneessa + kahden päivän ja yhden yön viidakkoretki" img={orangutan} price="260" />
+            <TrekCard name="Erikoistarjous kahdelle henglelle - 1 yö huoneessa + kahden päivän ja yhden yön viidakkoretki" img={orangutan} price="260" />
           </Slider>
         </div>
       );
