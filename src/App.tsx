@@ -41,7 +41,9 @@ const App = () => {
 const Logos = () => {
   return (
     <div className="fixed-logo">
-      <img className="logo-img" src={instagram} alt="instagram logo" />
+      <a href="https://www.instagram.com/jungleriverhouse/" target="_blank" rel="noopener noreferrer">
+        <img className="logo-img" src={instagram} alt="instagram logo" />
+      </a>
       <img className="logo-img" src={whatsapp} alt="whatsapp logo" />
     </div>
   )

@@ -41,6 +41,7 @@ const JungleTrekCarousel = () => {
           settings: {
             slidesToShow: 1, 
             slidesToScroll: 1,
+            arrows: false
           }
         },
       ]

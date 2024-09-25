@@ -45,7 +45,7 @@ const Home:React.FC<WindowWidthProps> = ({ windowWidth }) => {
 
 const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   return (
-    <div className="bg-color2" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div className="bg-color2" style={{ width: '100%', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <h1 className="jungle-header" style={{ marginTop: 50, marginBottom: 50 }}>Huoneet</h1>
       {windowWidth > 1200 ? (
         <Container>

@@ -46,6 +46,38 @@ body {
   height: 53px;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .fixed-logo {
+    margin-left: 10px;
+  }
+
+  .logo-img {
+    width: 40px; /* Pienennetään logon kokoa */
+    height: 40px; /* Pienennetään logon kokoa */
+  }
+
+  .logo-img:hover {
+    width: 43px; /* Muutetaan hover-tilan kokoa */
+    height: 43px; /* Muutetaan hover-tilan kokoa */
+  }
+}
+
+@media (max-width: 500px) {
+  .fixed-logo {
+    margin-left: 10px;
+  }
+
+  .logo-img {
+    width: 30px; /* Pienennetään logon kokoa */
+    height: 30px; /* Pienennetään logon kokoa */
+  }
+
+  .logo-img:hover {
+    width: 32px; /* Muutetaan hover-tilan kokoa */
+    height: 32px; /* Muutetaan hover-tilan kokoa */
+  }
+}
  
 .transparentBg {
   background: transparent !important;

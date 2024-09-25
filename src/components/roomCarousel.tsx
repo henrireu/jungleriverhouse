@@ -20,14 +20,24 @@ const RoomCarousel = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 3000, 
+    responsive: [
+      {
+        breakpoint: 600, 
+        settings: {
+          slidesToShow: 1, 
+          slidesToScroll: 1,
+          arrows: false
+        }
+      },
+    ]
   };
 
   return (
-      <div style={{ width: '70%' }}>
+      <div style={{ width: '85%' }}>
         <Slider {...settings}>
           <RoomCard name="Blackgibbon Room" img={blackGibbonRoom} price="31-36" />
           <RoomCard name="Family Room" img={familyRoom} price="78-90" />
