@@ -13,8 +13,8 @@ import Col from 'react-bootstrap/Col';
 
 import HomeRoom from '../home/homeRoom';
 import RoomCarousel from '../roomCarousel';
-
 import JungleTrekSection from './jungleTrekSection';
+import ReviewSection from './reviewSection';
 
 interface WindowWidthProps {
   windowWidth: number;
@@ -35,6 +35,7 @@ const Home:React.FC<WindowWidthProps> = ({ windowWidth }) => {
       </div>*/}
       <JungleTrekSection />
       <RoomsSection windowWidth={windowWidth}/>
+      <ReviewSection />
     </div>
   )
 }
@@ -45,7 +46,7 @@ const Home:React.FC<WindowWidthProps> = ({ windowWidth }) => {
 
 const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   return (
-    <div className="bg-color2" style={{ width: '100%', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div className="bg-color2" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingBottom: 50 }}>
       <h1 className="jungle-header" style={{ marginTop: 50, marginBottom: 50 }}>Huoneet</h1>
       {windowWidth > 1200 ? (
         <Container>
@@ -67,7 +68,6 @@ const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
     </div>
   )
 }
-
 
 /*const IntroductionTextCard = () => {
   return (

@@ -1,0 +1,139 @@
+/* Container for the entire section */
+.review-section {
+    min-height: 100vh;
+    display: flex;
+    width: 100%;
+    /*padding: 5%;*/
+    padding-top: 100px; 
+    padding-left: 10%;
+    padding-right: 10%;
+    gap: 5%;
+  }
+  
+  /* Left-side score section */
+  .score-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* Score circle */
+  .score-circle {
+    background-color: white;
+    border-radius: 128px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
+  
+  /* Score value inside the circle */
+  .score-value {
+    font-size: 50px;
+    color: orange;
+  }
+  
+  /* Text for score and reviews */
+  .score-reviews {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Right-side carousel section */
+  .carousel-section {
+    margin-left: 20px;
+  }
+  
+  /* Title in the carousel section */
+  .guest-say-title {
+    color: white;
+    font-style: italic;
+  }
+  
+  /* Carousel container */
+  .carousel-container {
+    /*width: 500px;*/
+    width: 600px;
+    margin-top: 50px;
+  }
+
+  .review-title {
+    color: orange;
+  }
+  
+  /* Text inside each review card */
+  .review-text {
+    color: white;
+    margin-top: 40px;
+    font-size: 20px;
+  }
+
+  .button-div {
+    margin-left: 10px;
+    margin-top: 50px;
+  }
+
+  .hotel-image {
+    width: 45%;
+    height: 45%;
+    border-radius: 4px;
+    margin-top: 10%;
+  }
+
+  @media (max-width: 1000px) {
+    .carousel-container {
+      width: 500px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .review-section {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .guest-say-title {
+     margin-left: 20px;
+     margin-top: 30px;
+    }
+
+    .carousel-container {
+        margin-top: 30px;
+    }
+
+    .review-text {
+        margin-top: 10px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .carousel-container {
+      width: 400px;
+    }
+
+    .review-title {
+      font-size: 17px;
+    }
+
+    .review-text {
+      font-size: 17px;
+    }
+  }
+  @media (max-width: 470px) {
+    .carousel-container {
+      width: 270px;
+    }
+
+    .review-title {
+      font-size: 15px;
+    }
+  
+    .review-text {
+      font-size: 15px;
+    }
+  }
