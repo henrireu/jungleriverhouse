@@ -22,20 +22,18 @@ interface WindowWidthProps {
 
 const Home:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   return (
-    <div
-      style={{ backgroundColor: '#004D40', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}
-    >
-      <JungleTrekSection />
-      {/*<div style={{marginTop: 50, display: 'flex', gap: 50, padding: 50}}>
+    <div className="bg-color1" style={{ /*backgroundColor: '#004D40' '#00695C',*/ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+      {/*<div style={{ display: 'flex', gap: 50, padding: 50}}>
         {windowWidth > 900 && (
           <Image 
             src={bukitImage} 
             rounded 
             style={{ width: '50%', height: windowWidth > 1200 ? 700 : 500}}
           />
-        )}
-        <IntroductionTextCard />
+        )
+        {/*<IntroductionTextCard />*//*}
       </div>*/}
+      <JungleTrekSection />
       <RoomsSection windowWidth={windowWidth}/>
     </div>
   )
@@ -47,8 +45,8 @@ const Home:React.FC<WindowWidthProps> = ({ windowWidth }) => {
 
 const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   return (
-    <div style={{ minHeight: '100vh', width: '100%', background: '#00695C', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <h1 className="display-1 text-light" style={{ marginTop: 50, marginBottom: 50}}>Huoneet</h1>
+    <div className="bg-color2" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <h1 className="jungle-header" style={{ marginTop: 50, marginBottom: 50 }}>Huoneet</h1>
       {windowWidth > 1200 ? (
         <Container>
         <Row xs={1} lg={2} xl={3} /*className="g-4 justify-content-md-center"*/>
@@ -73,10 +71,10 @@ const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
 
 /*const IntroductionTextCard = () => {
   return (
-    <Card className="text-center" bg="success" text="light" style={{ }}>
+    <Card className="text-center" style={{ backgroundColor: 'transparent', border: 'none', color: 'white'}}>
       <Card.Body>
-        <Card.Title className="fs-1" style={{ marginBottom: 50}}>Moi!</Card.Title>
-        <Card.Title className="fs-3" style={{ marginBottom: 50}}>TERVETULOA!</Card.Title>
+        <h1 className="jungle-header" style={{ marginBottom: 10}}>MOI!</h1>
+        <Card.Title className="fs-3" style={{ marginBottom: 10}}>TERVETULOA!</Card.Title>
         <Card.Text className="fs-4">
         Haluatko kokea sademetsän ja oman viidakkoseikkailusi luonnossa villieläimiä kanssa?
         </Card.Text>

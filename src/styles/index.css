@@ -1,14 +1,57 @@
+@font-face {
+  font-family: 'JungleFever';
+  src: url('../assets/fonts/JungleFever.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+  /*font-family: 'JungleFever', sans-serif !important;*/
+}
   
-  .transparentBg {
-    background: transparent !important;
-    border: none !important;
-  }
+.jungle-header {
+  color: white;
+  font-family: 'JungleFever, sans-serif';
+}
+
+.bg-color1 {
+  background-color: #00695C;
+}
+
+.bg-color2 {
+  /*background-color: #004D40;*/
+  background-color: #05866e;
+}
+
+.fixed-logo {
+  position: fixed; /* Pidä logo paikallaan */
+  margin-left: 20px;       /* Aseta logo vasemmalle */
+  top: 85%;       /* Keskitetään korkeussuunnassa */
+  transform: translateY(-50%); /* Siirrä logoa ylös keskittääksesi sen */
+  z-index: 1000; /* Varmista, että logo on muiden elementtien päällä */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px
+}
+
+.logo-img:hover {
+  width: 53px;
+  height: 53px;
+  cursor: pointer;
+}
+ 
+.transparentBg {
+  background: transparent !important;
+  border: none !important;
+}
   
-  .transparentBg:hover {
-    background: grey !important;
-  } 
-  
+.transparentBg:hover {
+  background: grey !important;
+} 

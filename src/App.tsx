@@ -9,6 +9,9 @@ import Video from './components/backgroundVideo';
 import Rooms from './components/rooms/rooms';
 import TopOfVideoContent from './components/topOfVideoContent';
 
+import instagram from './images/instagram.png';
+import whatsapp from './images/whatsapp.png';
+
 // react slickin karousellit menee sekaisin kun ne käärii diviin
 
 const App = () => {
@@ -23,7 +26,7 @@ const App = () => {
           <TopOfVideoContent windowWidth={windowWidth}/>
         </div>
       </div>
-
+      <Logos />
       {/*<Home windowWidth={windowWidth}/>*/}
 
       <Routes>
@@ -32,6 +35,15 @@ const App = () => {
         <Route path="/rooms" element={<Rooms />} />
       </Routes>
     </Router>
+  )
+}
+
+const Logos = () => {
+  return (
+    <div className="fixed-logo">
+      <img className="logo-img" src={instagram} alt="instagram logo" />
+      <img className="logo-img" src={whatsapp} alt="whatsapp logo" />
+    </div>
   )
 }
 
