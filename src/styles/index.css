@@ -100,7 +100,7 @@ body {
 .down-icon {
   font-size: 30px;
   position: absolute;
-  bottom: 40px;
+  bottom: 10%;
 }
 
 .down-icon:hover {
