@@ -97,6 +97,16 @@ body {
   align-items: center;
 }
 
+.down-icon {
+  font-size: 30px;
+  position: absolute;
+  bottom: 40px;
+}
+
+.down-icon:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 1200px) {
   .footer-container {
     padding: 30px;

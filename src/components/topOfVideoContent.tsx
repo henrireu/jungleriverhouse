@@ -1,13 +1,16 @@
 import { useLocation } from "react-router-dom";
+import ScrollIntoView from 'react-scroll-into-view';
 
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import blackGibbonRoom from '../images/rooms/black-gibbon-room.jpg';
 import familyRoom from '../images/rooms/family-room.webp';
 import orantuganRoom from '../images/rooms/orangutan-room.jpg';
+
 
 interface WindowWidthProps {
   windowWidth: number;
@@ -22,7 +25,7 @@ const TopOfVideoContent:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   const currentPath = location.pathname;
 
   return (
-    <div style={{ display: 'flex', gap: 300, alignItems: 'center', justifyContent: 'center', height: '80vh'}}>
+    <div /*style={{ display: 'flex', flexDirection: 'column', gap: 300, alignItems: 'center', justifyContent: 'center', height: '80vh'}}*/>
       { currentPath === '/' ? (
         <HomeContent  />
       ) : currentPath === '/rooms' ? (
@@ -47,11 +50,13 @@ const RoomsContent:React.FC<WindowWidthProps> = ({ windowWidth }) => {
 
 const HomeContent:React.FC = () => {
     return (
-        <div>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', position: 'relative' }}>
             <TextCard text="Koe unohtumaton kokemus Jungle River Housessa"/>
-            {/*{windowWidth > 950 && (
-              <RoomCardGroup />
-            )}*/}
+            <div className="down-icon">
+            <ScrollIntoView selector="#scroll-home" smooth>         
+              <i className="bi bi-arrow-down-circle"></i>
+            </ScrollIntoView>
+            </div>
         </div>
       )
 }

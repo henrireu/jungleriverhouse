@@ -18,7 +18,7 @@ interface WindowWidthProps {
 
 const Home:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   return (
-    <div className="bg-color1" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+    <div id="scroll-home" className="bg-color1" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', paddingTop: 50 }}>
       <JungleTrekSection />
       <RoomsSection windowWidth={windowWidth}/>
       <ReviewSection />
