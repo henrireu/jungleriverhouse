@@ -1,19 +1,8 @@
-@font-face {
-  font-family: 'JungleFever';
-  src: url('../assets/fonts/JungleFever.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 body {
   margin: 0;
   padding: 0;
   /*font-family: 'JungleFever', sans-serif !important;*/
-}
-  
-.jungle-header {
-  color: white;
-  font-family: 'JungleFever, sans-serif';
+  font-family: 'Gowun Batang', serif;
 }
 
 .bg-color1 {
@@ -23,6 +12,19 @@ body {
 .bg-color2 {
   /*background-color: #004D40;*/
   background-color: #05866e;
+}
+
+.text1 {
+  font-family: 'Gowun Batang', serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: white;
+}
+
+.header1 {
+  font-family: 'Gowun Batang', serif;
+  font-weight: 700;
+  color: white;
 }
 
 .fixed-logo {
@@ -115,6 +117,9 @@ body {
   .follow-us-header {
     display: none;
   }
+  .text1 {
+    font-size: 17px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -135,6 +140,10 @@ body {
   .footer-container {
     flex-direction: column;
     gap: 20px;
+  }
+
+  .text1 {
+    font-size: 16px;
   }
 
 }
@@ -160,6 +169,10 @@ body {
 
   .contact-container {
     font-size: 14px;
+  }
+
+  .text1 {
+    font-size: 15px;
   }
 }
  

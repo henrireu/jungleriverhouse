@@ -10,7 +10,7 @@ import '../../styles/home.css';
 
 const ReviewSection = () => {
     return (
-      <div className="review-section">
+      <div className="review-section bg-color2">
         <div className="score-section">
           <div className="score-circle">
             <p className="score-value">9.2</p>

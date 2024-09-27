@@ -11,6 +11,7 @@ import RoomCarousel from '../roomCarousel';
 import JungleTrekSection from './jungleTrekSection';
 import ReviewSection from './reviewSection';
 import ContactFooter from '../contactFooter';
+import Welcome from './welcomeSection';
 
 interface WindowWidthProps {
   windowWidth: number;
@@ -18,7 +19,8 @@ interface WindowWidthProps {
 
 const Home:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   return (
-    <div id="scroll-home" className="bg-color1" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', paddingTop: 50 }}>
+    <div id="scroll-home" className="bg-color1" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', paddingTop: 150 }}>
+      <Welcome />
       <JungleTrekSection />
       <RoomsSection windowWidth={windowWidth}/>
       <ReviewSection />
@@ -29,8 +31,8 @@ const Home:React.FC<WindowWidthProps> = ({ windowWidth }) => {
 
 const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   return (
-    <div className="bg-color2" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingBottom: 50 }}>
-      <h1 className="jungle-header" style={{ marginTop: 50, marginBottom: 50 }}>Huoneet</h1>
+    <div className="bg-color1" style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingBottom: 50 }}>
+      <h1 className="header1" style={{ marginTop: 50, marginBottom: 50 }}>Huoneet</h1>
       {windowWidth > 1200 ? (
         <Container>
         <Row xs={1} lg={2} xl={3} /*className="g-4 justify-content-md-center"*/>
