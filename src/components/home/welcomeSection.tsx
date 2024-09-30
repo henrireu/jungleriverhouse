@@ -7,7 +7,7 @@ const Welcome = () => {
     <div className="welcome-container">
       <div className="welcome-text">
         <h1 className="header1">Moi!</h1>
-        <h5 className="header1">TERVETULOA!</h5>
+        <h5 className="header2">TERVETULOA!</h5> 
         <div style={{textAlign: 'center'}}>
           <p className="text1">
             Haluatko kokea sademetsän ja oman viidakkoseikkailusi luonnossa villieläimiä kanssa?

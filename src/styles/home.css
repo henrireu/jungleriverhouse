@@ -20,8 +20,6 @@
   flex-direction: column;
   gap: 20px;
   max-width: 800px;
-  /*width: 100%;*/
-  /*padding-left: 50px;*/
   align-items: center; 
 }
 
@@ -39,6 +37,17 @@
   width: 100%;
 }
 
+.jungletrek-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1200px;
+  align-items: center; 
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+}
+
 /*jungle trek section ends*/
 
 
@@ -50,7 +59,18 @@
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
+}
+
+.room-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1000px;
+  align-items: center; 
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
 }
 
 /*rooms section ends*/

@@ -5,15 +5,15 @@
   .slick-dots li button:before {
     opacity: 0.75; 
     font-size: 10px; 
-    color: green;
+    color: lightgray;
   }
   
   .slick-dots li.slick-active button:before { 
     opacity: 1; 
-    color: lightgray;
+    color: green;
   }
 
   .slick-prev:before, .slick-next:before {
-    color: #00695C !important;
+    color: lightgrey !important;
     font-size: 30px;
   }

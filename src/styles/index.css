@@ -21,14 +21,22 @@ body {
   font-weight: 700;
   font-size: 18px;
   /*color: white;*/
-  color: black;
+  /*color: #444444;*/
+  color: #555555;
 }
 
 .header1 {
   font-family: 'Gowun Batang', serif;
   font-weight: bold;
   /*color: white;*/
-  color: black;
+  color: orange;
+  font-style: italic;
+  font-size: 70px;
+}
+
+.header2 {
+  color: grey;
+  font-size: 30px
 }
 
 .fixed-logo {
@@ -124,6 +132,12 @@ body {
   .text1 {
     font-size: 17px;
   }
+  .header1 {
+    font-size: 60px;
+  }
+  .header2 {
+    font-size: 25px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -148,6 +162,12 @@ body {
 
   .text1 {
     font-size: 16px;
+  }
+  .header1 {
+    font-size: 45px;
+  }
+  .header2 {
+    font-size: 20px;
   }
 
 }
@@ -177,6 +197,13 @@ body {
 
   .text1 {
     font-size: 15px;
+  }
+
+  .header1 {
+    font-size: 30px;
+  }
+  .header2 {
+    font-size: 17px;
   }
 }
  

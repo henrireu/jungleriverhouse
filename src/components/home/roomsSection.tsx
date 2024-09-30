@@ -17,11 +17,14 @@ interface WindowWidthProps {
 const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   return (
     <div className="bg-color1 room-container">
-      <h1 className="header1" style={{ marginBottom: 50 }}>Huoneet</h1>
-      <div style={{ marginBottom: 50, textAlign: 'center', maxWidth: 800, paddingLeft: 50, paddingRight: 50}}>
-        <p className="text1">
+      <div style={{ marginBottom: 50 }} className="room-text">
+        <h1 className="header1">Huoneet</h1>
+        <h3 className="header2">LISÄTIETOA</h3>
+        <div>
+          <p className="text1">
           Majoituspaikkamme tarjoaa sinulle viihtyisästi sisustetut huoneet monilla mukavuuksilla ja näköalan joelle. Hotellin yhteydessä on myös ravintola aivan joen rannalla, jossa voit nauttia hyvästä indonesialaisesta tai länsimaalaisesta ruoasta, juomista sekä viidakon tunnelmasta. Sijaintimme on ihan keskeisellä paikalla Bukit Lawangissa.
-        </p>
+          </p>
+        </div>
       </div>
       {windowWidth > 1200 ? (
         <Container>
