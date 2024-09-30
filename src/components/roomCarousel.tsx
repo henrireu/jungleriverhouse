@@ -37,29 +37,31 @@ const RoomCarousel = () => {
   };
 
   return (
-      <div style={{ width: '85%' }}>
-        <Slider {...settings}>
-          <RoomCard name="Blackgibbon Room" img={blackGibbonRoom} price="31-36" />
-          <RoomCard name="Family Room" img={familyRoom} price="78-90" />
-          <RoomCard name="Orangutan Room" img={orangutanRoom} price="31-36" />
-        </Slider>
-      </div>
-    );
+    <div style={{ width: '85%' }}>
+      <Slider {...settings}>
+        <RoomCard name="Blackgibbon Room" img={blackGibbonRoom} price="31-36" />
+        <RoomCard name="Family Room" img={familyRoom} price="78-90" />
+        <RoomCard name="Orangutan Room" img={orangutanRoom} price="31-36" />
+      </Slider>
+    </div>
+  );
 }
 
 const RoomCard = ({ name, img, price }: RoomCardProps) => {
   return (
     <div style={{ display: 'flex', justifyContent: 'center'}}>
-    <Card bg="success" text="light" className="text-center" style={{ width: '80%' }}>
-      <Card.Img variant="top" src={img} style={{ }}/>
-      <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <Card.Text>
-          Hinta / yö {price} €
-        </Card.Text>
-        <Button variant="outline-light">LISÄTIETOA</Button>
-      </Card.Body>
-    </Card>
+      <Card bg="light" className="text-center" style={{ width: '80%' }}>
+        <Card.Img variant="top" src={img} style={{ }}/>
+        <Card.Body>
+          <Card.Title>{name}</Card.Title>
+          <Card.Text>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            Hinta / yö &nbsp;<strong style={{ fontSize: 20}}>{price} €</strong>
+            </div>
+          </Card.Text>
+          <Button variant="outline-success">LISÄTIETOA</Button>
+        </Card.Body>
+      </Card>
     </div>
   );
 }

@@ -1,3 +1,11 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+
 /*welcome section*/
 
 .welcome-container {
@@ -7,21 +15,45 @@
   padding-bottom: 100px;
 }
 
-.welcome-img {
-  width: 45%;
-  height: 45%;
-}
-
 .welcome-text {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
-  padding-left: 50px;
-  align-items: center;
+  max-width: 800px;
+  /*width: 100%;*/
+  /*padding-left: 50px;*/
+  align-items: center; 
 }
 
 /*welcome section ends*/
+
+
+/*jungle trek section starts*/
+
+.jungletrek-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 150px;
+  width: 100%;
+}
+
+/*jungle trek section ends*/
+
+
+/*rooms section starts*/
+
+.room-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/*rooms section ends*/
 
 .review-section {
     display: flex;
@@ -72,7 +104,6 @@
   }
   
   .carousel-container {
-    /*width: 500px;*/
     width: 600px;
     margin-top: 50px;
   }

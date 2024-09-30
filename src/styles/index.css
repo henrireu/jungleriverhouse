@@ -6,25 +6,29 @@ body {
 }
 
 .bg-color1 {
-  background-color: #00695C;
+  /*background-color: #00695C;*/
+  /*background-color: mintcream;*/
+  background-color: white;
 }
 
 .bg-color2 {
-  /*background-color: #004D40;*/
-  background-color: #05866e;
+  /*background-color: #05866e;*/
+  background-color: whitesmoke; 
 }
 
 .text1 {
   font-family: 'Gowun Batang', serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 18px;
-  color: white;
+  /*color: white;*/
+  color: black;
 }
 
 .header1 {
   font-family: 'Gowun Batang', serif;
-  font-weight: 700;
-  color: white;
+  font-weight: bold;
+  /*color: white;*/
+  color: black;
 }
 
 .fixed-logo {

@@ -36,87 +36,87 @@ const NavigationBarContent: React.FC<WindowWidthProps> = ({ windowWidth }) => {
 
   return (
     <>
-    <Styles />
-    <Navbar 
-      fixed="top"
-      expand="xl" 
-      variant="dark" 
-      className="navbar-custom"
-      style={{ background: scrollPosition < 110 ? 'transparent' : '#2F4F4F' }}
+      <Styles />
+      <Navbar 
+        fixed="top"
+        expand="xl" 
+        variant="dark" 
+        className="navbar-custom"
+        style={{ background: scrollPosition < 110 ? 'transparent' : /*'#2F4F4F' '#343a40'*/ '#00695C' }} 
       
-    >
-      <Container fluid>
-        <Navbar.Brand className="text-light">
-          <img
-            alt=""
-            src={logo}
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-            style={{ borderRadius: 14}}
-          /> {'  '}
+      >
+        <Container fluid>
+          <Navbar.Brand className="text-light">
+            <img
+              alt=""
+              src={logo}
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+              style={{ borderRadius: 14}}
+            /> {'  '}
           JUNGLE RIVER HOUSE
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse className="justify-content-center z-index1090" style={{ backgroundColor: windowWidth < 1200 ? '#343a40' : 'transparent', width: "100%", marginTop: 10 }}>
-          <Nav /*className="me-auto"*/>
-            <Link to="/" style={{ textDecoration: 'none', color: 'inherit'}}>
-              <Button variant="flat" size='lg'>Home</Button>
-            </Link>
-            <Link to="/about" style={{ textDecoration: 'none', color: 'inherit'}}>
-              <Button variant="flat" size='lg'>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse className="justify-content-center z-index1090" style={{ backgroundColor: windowWidth < 1200 ? '#343a40' : 'transparent', width: "100%", marginTop: 10 }}>
+            <Nav /*className="me-auto"*/>
+              <Link to="/" style={{ textDecoration: 'none', color: 'inherit'}}>
+                <Button variant="flat" size='lg'>Home</Button>
+              </Link>
+              <Link to="/about" style={{ textDecoration: 'none', color: 'inherit'}}>
+                <Button variant="flat" size='lg'>
                 About us
-              </Button>
-            </Link>
-            {windowWidth > 1200 ? (
-              <Link to="/rooms" style={{ textDecoration: 'none', color: 'inherit'}}>
+                </Button>
+              </Link>
+              {windowWidth > 1200 ? (
+                <Link to="/rooms" style={{ textDecoration: 'none', color: 'inherit'}}>
+                  <DropdownButton 
+                    id="dropdown-basic-button" 
+                    size='lg'
+                    title="Rooms" 
+                    data-bs-theme="dark"
+                    variant="flat"
+                    show={showRoomMenu}
+                    onMouseEnter={() => setShowRoomMenu(true)}
+                    onMouseLeave={() => setShowRoomMenu(false)}
+                  >
+                    <Dropdown.Item>Orangutan Room</Dropdown.Item>
+                    <Dropdown.Item>Black Gibbon Room</Dropdown.Item>
+                    <Dropdown.Item>Family Room</Dropdown.Item>
+                  </DropdownButton>
+                </Link>
+              ) : (
+                <Link to="/rooms" style={{ textDecoration: 'none', color: 'inherit'}}>
+                  <Button variant="flat" size="lg">Rooms</Button>
+                </Link>
+              )}
+
+              {windowWidth > 1200 ? (
                 <DropdownButton 
                   id="dropdown-basic-button" 
                   size='lg'
-                  title="Rooms" 
+                  title="Jungle Trek" 
                   data-bs-theme="dark"
                   variant="flat"
-                  show={showRoomMenu}
-                  onMouseEnter={() => setShowRoomMenu(true)}
-                  onMouseLeave={() => setShowRoomMenu(false)}
+                  show={showTrekMenu}
+                  onMouseOver={() => setShowTrekMenu(true)}
+                  onMouseLeave={() => setShowTrekMenu(false)}
                 >
-                  <Dropdown.Item>Orangutan Room</Dropdown.Item>
-                  <Dropdown.Item>Black Gibbon Room</Dropdown.Item>
-                  <Dropdown.Item>Family Room</Dropdown.Item>
+                  <Dropdown.Item>Half Day Jungle Trek</Dropdown.Item>
+                  <Dropdown.Item>One Day Jungle Trek</Dropdown.Item>
+                  <Dropdown.Item>2 Days Jungle Trek</Dropdown.Item>
+                  <Dropdown.Item>3 Days Jungle Trek</Dropdown.Item>
                 </DropdownButton>
-              </Link>
-            ) : (
-              <Link to="/rooms" style={{ textDecoration: 'none', color: 'inherit'}}>
-                <Button variant="flat" size="lg">Rooms</Button>
-              </Link>
-            )}
+              ) : (
+                <Button variant="flat" size="lg">Jungle Trek</Button>
+              )}
 
-            {windowWidth > 1200 ? (
-              <DropdownButton 
-              id="dropdown-basic-button" 
-              size='lg'
-              title="Jungle Trek" 
-              data-bs-theme="dark"
-              variant="flat"
-              show={showTrekMenu}
-              onMouseOver={() => setShowTrekMenu(true)}
-              onMouseLeave={() => setShowTrekMenu(false)}
-            >
-              <Dropdown.Item>Half Day Jungle Trek</Dropdown.Item>
-              <Dropdown.Item>One Day Jungle Trek</Dropdown.Item>
-              <Dropdown.Item>2 Days Jungle Trek</Dropdown.Item>
-              <Dropdown.Item>3 Days Jungle Trek</Dropdown.Item>
-            </DropdownButton>
-            ) : (
-              <Button variant="flat" size="lg">Jungle Trek</Button>
-            )}
-
-            <Button variant="flat" size='lg'>Contacts</Button>
-            <Button variant="flat" size='lg'>Book Your Stay</Button>
-          </Nav> 
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+              <Button variant="flat" size='lg'>Contacts</Button>
+              <Button variant="flat" size='lg'>Book Your Stay</Button>
+            </Nav> 
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </>
   )
 }
