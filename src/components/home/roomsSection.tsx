@@ -17,14 +17,9 @@ interface WindowWidthProps {
 const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   return (
     <div className="bg-color1 room-container">
-      <div style={{ marginBottom: 50 }} className="room-text">
+      <div className="room-text">
         <h1 className="header1">Huoneet</h1>
         <h3 className="header2">LISÄTIETOA</h3>
-        <div>
-          <p className="text1">
-          Majoituspaikkamme tarjoaa sinulle viihtyisästi sisustetut huoneet monilla mukavuuksilla ja näköalan joelle. Hotellin yhteydessä on myös ravintola aivan joen rannalla, jossa voit nauttia hyvästä indonesialaisesta tai länsimaalaisesta ruoasta, juomista sekä viidakon tunnelmasta. Sijaintimme on ihan keskeisellä paikalla Bukit Lawangissa.
-          </p>
-        </div>
       </div>
       {windowWidth > 1200 ? (
         <Container>
@@ -62,7 +57,7 @@ const HomeRoom = ({ name, img, price, windowWidth }: homeRoomProps) => {
         <Card.Title>{name}</Card.Title>
         <Card.Text>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            Hinta / yö &nbsp;<strong style={{ fontSize: 20}}>{price} €</strong>
+            Hinta / yö &nbsp;<strong style={{ fontSize: 25, color: 'orange'}}>{price} €</strong>
           </div>
         </Card.Text>
         <Button variant="outline-success">LISÄTIETOA</Button>

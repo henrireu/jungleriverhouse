@@ -121,6 +121,11 @@ body {
   cursor: pointer;
 }
 
+.small-text-margin {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
 @media (max-width: 1200px) {
   .footer-container {
     padding: 30px;
@@ -197,6 +202,7 @@ body {
 
   .text1 {
     font-size: 15px;
+    margin-bottom: 5px;
   }
 
   .header1 {

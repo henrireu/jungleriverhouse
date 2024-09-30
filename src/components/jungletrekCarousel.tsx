@@ -69,7 +69,7 @@ const TrekCard = ({ name, img, price }: TrekCardProps) => {
           <Card.Title>{name}</Card.Title>
           <Card.Text>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            Hinta / hlö &nbsp;<strong style={{ fontSize: 20}}>{price} €</strong>
+            Hinta / hlö &nbsp;<strong style={{ fontSize: 25, color: 'orange'}}>{price} €</strong>
             </div>
           </Card.Text>
           <Button variant="outline-success">LISÄTIETOA</Button>

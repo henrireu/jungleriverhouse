@@ -56,7 +56,7 @@ const RoomCard = ({ name, img, price }: RoomCardProps) => {
           <Card.Title>{name}</Card.Title>
           <Card.Text>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            Hinta / yö &nbsp;<strong style={{ fontSize: 20}}>{price} €</strong>
+            Hinta / yö &nbsp;<strong style={{ fontSize: 25, color: 'orange'}}>{price} €</strong>
             </div>
           </Card.Text>
           <Button variant="outline-success">LISÄTIETOA</Button>
