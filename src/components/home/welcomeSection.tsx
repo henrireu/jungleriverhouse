@@ -1,10 +1,13 @@
 import ButtonOutline from "../buttonOutline";
 
-//import bukitimg from '../../images/jungle-river-house-bukit.jpg';
+import bukitimg from '../../images/jungle-river-house-bukit.jpg'; 
 
 const Welcome = () => {
   return (
     <div className="welcome-container">
+      <div className="welcome-image-container">
+        <img src={bukitimg} alt="room image" className="welcome-image"/>
+      </div>
       <div className="welcome-text">
         <h1 className="header1">Moi!</h1>
         <h5 className="header2">TERVETULOA!</h5> 

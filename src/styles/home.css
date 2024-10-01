@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
+  /*padding-top: 100px;*/
 }
 
 /*welcome section*/
@@ -13,14 +13,30 @@
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 100px;
+  padding-top: 100px;
+  width: 100%;
+}
+
+.welcome-image-container {
+  flex: 1;
+  display: flex;
+}
+
+.welcome-image {
+  width: 100%; /* Kuva vie koko boxin leveyden */
+  height: auto; /* Säilyttää kuvasuhteen */
+  object-fit: cover;
+  border-radius: 4px;
 }
 
 .welcome-text {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 800px;
+  /*max-width: 800px;*/
   align-items: center; 
+  padding-left: 50px;
 }
 
 .welcome-button {
@@ -37,7 +53,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
-  padding-bottom: 150px;
+  padding-bottom: 140px;
   width: 100%;
   gap: 50px;
 }
@@ -80,6 +96,9 @@
 }
 
 /*rooms section ends*/
+
+
+/*review section starts*/
 
 .review-section {
     display: flex;
@@ -149,15 +168,62 @@
     margin-top: 10px;
   }
 
-  .hotel-image {
-    width: 45%;
-    height: 45%;
-    border-radius: 4px;
-    margin-top: 10%;
+  /*review section ends*/
+
+
+  /*contact section starts*/
+
+  .contacts-container {
+    display: flex;
+    width: 100%;
+  }
+
+  .contact-text-container {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .contact-text {
+    padding-top: 50px;
+    gap: 20px;
+  }
+
+  .map-container {
+    flex: 1;
+  }
+
+  /*contact section ends*/
+
+  @media (max-width: 1200px) {
+    .welcome-image-container {
+      display: none;
+    }
+    .welcome-text {
+      padding-left: 0;
+    }
   }
 
 
   @media (max-width: 1000px) {
+    .welcome-container {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    .jungletrek-container {
+      padding-top: 70px;
+      padding-bottom: 110px;
+    }
+
+    .room-container {
+      padding-top: 70px;
+      padding-bottom: 110px;
+    }
+
     .carousel-container {
       width: 500px;
     }
@@ -199,9 +265,6 @@
         margin-top: 10px;
     }
 
-    .welcome-button {
-      margin-top: 20px;
-    }
   }
 
   @media (max-width: 600px) {
@@ -218,7 +281,7 @@
     }
 
     .welcome-button {
-      margin-top: 10px;
+      margin-top: 20px;
     }
   }
   @media (max-width: 470px) {
@@ -235,6 +298,6 @@
     }
 
     .welcome-button {
-      margin-top: 0;
+      margin-top: 10px;
     }
   }

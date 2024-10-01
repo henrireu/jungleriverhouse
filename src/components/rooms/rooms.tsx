@@ -1,5 +1,7 @@
 import Card from "react-bootstrap/Card";
 
+import ContactFooter from "../contactFooter";
+
 const Rooms = () => {
   return (
     <div style={{ backgroundColor: '#00695C', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
@@ -8,6 +10,7 @@ const Rooms = () => {
       {/*testi divi*/}
       <div style={{ minHeight: '100vh', backgroundColor: 'green'}}>
       </div>
+      <ContactFooter />
     </div>
   )
 }

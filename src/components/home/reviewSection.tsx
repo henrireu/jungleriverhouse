@@ -23,7 +23,7 @@ const ReviewSection = () => {
         <h1 className="guest-say-title">Guests say: </h1>
         <ReviewCarousel />
         <div className="button-div">
-          <Button variant="outline-light" size="lg">READ FULL REVIEW</Button>
+          <Button variant="outline-light">READ FULL REVIEW</Button>
         </div>
       </div>
     </div>
@@ -37,7 +37,7 @@ const ReviewCarousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 6000,
+    autoplaySpeed: 8000,
     arrows: false,
   };
   

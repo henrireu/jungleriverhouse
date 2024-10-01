@@ -24,7 +24,7 @@ const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
       </div>
       {windowWidth > 1200 ? (
         <Container>
-          <Row xs={1} lg={2} xl={3} /*className="g-4 justify-content-md-center"*/>
+          <Row /*xs={1} lg={2} xl={3}*/>
             <Col>
               <HomeRoom name="Blackgibbon Huone" img={blackGibbonRoom} price={"31-36"} windowWidth={windowWidth}/>
             </Col>
@@ -52,7 +52,7 @@ const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
 
 const HomeRoom = ({ name, img, price, windowWidth }: homeRoomProps) => {
   return (
-    <Card className="text-center" style={{ color: '#F2F0E6', backgroundColor: '#05866e', border: 'none', width: windowWidth >= 1400 ? '24rem' : '19rem', height: windowWidth >= 1400 ? '29rem' : '23rem' }}>
+    <Card className="text-center" style={{ color: '#F2F0E6', backgroundColor: '#05866e', border: 'none', width: windowWidth >= 1400 ? '26rem' : '21rem'/*'24rem' : '19rem'*/, height: windowWidth >= 1400 ? '29rem' : '25rem' /*'29rem' : '23rem'*/ }}>
       <Card.Img variant="top" src={img} style={{ height: 300 }}/>
       <Card.Body>
         <Card.Title>{name}</Card.Title>
