@@ -46,14 +46,14 @@ const NavigationBarContent: React.FC<WindowWidthProps> = ({ windowWidth }) => {
       
       >
         <Container fluid>
-          <Navbar.Brand className="text-light">
+          <Navbar.Brand className="text-light custom-brand">
             <img
               alt=""
               src={logo}
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-              style={{ borderRadius: 14}}
+              //width="30"
+              //height="30"
+              className="d-inline-block align-top custom-image"
+              //style={{ borderRadius: 14 }}
             /> {'  '}
           JUNGLE RIVER HOUSE
           </Navbar.Brand>
@@ -146,8 +146,31 @@ const Styles = () => {
             z-index: 1090 !important;
           }
 
-          .z-index1090 {
-            z-index:1090 !important;
+          .custom-brand {
+            font-size: 20px;
+          }
+
+          .custom-image {
+            border-radius: 14px;
+            height: 30px;
+            width: 30px;
+          }
+
+          @media (max-width: 400px) {
+            .navbar-custom {
+              padding-left: 5px;
+              padding-right: 5px;
+            }
+
+            .custom-brand {
+              font-size: 18px;
+            }
+
+            .custom-image {
+              height: 26px;
+              width: 26px;
+            }
+
           }
         `}
       </style>
