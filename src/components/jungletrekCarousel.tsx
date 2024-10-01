@@ -2,7 +2,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 import bird from '../images/jungletrek/bird.webp';
@@ -10,6 +9,8 @@ import blackmonkey from '../images/jungletrek/blackmonkey.webp';
 import tiger from '../images/jungletrek/tiger.jpg';
 import monkey from '../images/jungletrek/monkey.webp';
 import orangutan from '../images/jungletrek/orangutan.jpg';
+
+import ButtonOutline from "./buttonOutline";
 
 import '../styles/carousels.css';
 
@@ -63,16 +64,16 @@ const JungleTrekCarousel = () => {
 const TrekCard = ({ name, img, price }: TrekCardProps) => {
   return (
     <div style={{ display: 'flex', justifyContent: 'center'}}>
-      <Card /*bg="secondary"*/ /*text="white"*/ className="text-center" style={{ width: '80%' }}>
+      <Card /*bg="success"*/ /*text="white"*/ className="text-center" style={{ color: '#F2F0E6', width: '80%', backgroundColor: '#00695C', border: 'none' }}>
         <Card.Img variant="top" src={img} style={{  }}/>
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            Hinta / hlö &nbsp;<strong style={{ fontSize: 25, color: 'orange'}}>{price} €</strong>
+            Hinta / hlö &nbsp;<strong style={{ fontSize: 25 }}>{price} €</strong>
             </div>
           </Card.Text>
-          <Button variant="outline-success">LISÄTIETOA</Button>
+          <ButtonOutline text="LISÄTIETOA" />
         </Card.Body>
       </Card>
     </div>

@@ -1,41 +1,46 @@
 body {
   margin: 0;
   padding: 0;
-  /*font-family: 'JungleFever', sans-serif !important;*/
   font-family: 'Gowun Batang', serif;
 }
 
 .bg-color1 {
-  /*background-color: #00695C;*/
-  /*background-color: mintcream;*/
-  background-color: white;
+  background-color: #00695C;
+  /*background-color: white;*/
 }
 
 .bg-color2 {
-  /*background-color: #05866e;*/
-  background-color: whitesmoke; 
+  background-color: #05866e;
+  /*background-color: whitesmoke;*/ 
+}
+
+.button1 {
+  color: red;
 }
 
 .text1 {
   font-family: 'Gowun Batang', serif;
-  font-weight: 700;
+  /*font-weight: 700;*/
   font-size: 18px;
   /*color: white;*/
-  /*color: #444444;*/
-  color: #555555;
+  color: #F2F0E6;
+  /*color: #555555;*/
 }
 
 .header1 {
   font-family: 'Gowun Batang', serif;
   font-weight: bold;
   /*color: white;*/
-  color: orange;
+  color: #F2F0E6;
+  /*color: orange;*/
   font-style: italic;
   font-size: 70px;
 }
 
 .header2 {
-  color: grey;
+  font-family: 'Gowun Batang', serif;
+  /*color: grey;*/
+  color: #F2F0E6;
   font-size: 30px
 }
 

@@ -42,7 +42,7 @@ const NavigationBarContent: React.FC<WindowWidthProps> = ({ windowWidth }) => {
         expand="xl" 
         variant="dark" 
         className="navbar-custom"
-        style={{ background: scrollPosition < 110 ? 'transparent' : /*'#2F4F4F' '#343a40'*/ '#00695C' }} 
+        style={{ background: scrollPosition < 110 ? 'transparent' : '#2F4F4F' /*'#00695C'*/ }} 
       
       >
         <Container fluid>

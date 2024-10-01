@@ -2,12 +2,14 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-import Button from 'react-bootstrap/Button';
+//import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 import blackGibbonRoom from '../images/rooms/black-gibbon-room.jpg';
 import familyRoom from '../images/rooms/familyroom2.jpg';
 import orangutanRoom from '../images/rooms/orangutan-room.jpg';
+
+import ButtonOutline from "./buttonOutline";
 
 interface RoomCardProps {
   img: string;
@@ -46,20 +48,20 @@ const RoomCarousel = () => {
     </div>
   );
 }
-
+ 
 const RoomCard = ({ name, img, price }: RoomCardProps) => {
   return (
     <div style={{ display: 'flex', justifyContent: 'center'}}>
-      <Card bg="light" className="text-center" style={{ width: '80%' }}>
+      <Card className="text-center" style={{ width: '80%', backgroundColor: '#05866e', color: '#F2F0E6' }}>
         <Card.Img variant="top" src={img} style={{ }}/>
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            Hinta / yö &nbsp;<strong style={{ fontSize: 25, color: 'orange'}}>{price} €</strong>
+            Hinta / yö &nbsp;<strong style={{ fontSize: 25 }}>{price} €</strong>
             </div>
           </Card.Text>
-          <Button variant="outline-success">LISÄTIETOA</Button>
+          <ButtonOutline text="LISÄTIETOA"/>
         </Card.Body>
       </Card>
     </div>
