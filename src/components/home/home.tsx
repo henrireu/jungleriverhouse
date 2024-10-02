@@ -3,7 +3,7 @@ import ReviewSection from './reviewSection';
 import ContactFooter from '../contactFooter';
 import Welcome from './welcomeSection';
 import RoomsSection from './roomsSection';
-import ContactSection from './contactSection';
+//import ContactSection from './contactSection';
 
 interface WindowWidthProps {
   windowWidth: number;
@@ -16,7 +16,7 @@ const Home:React.FC<WindowWidthProps> = ({ windowWidth }) => {
       <JungleTrekSection />
       <RoomsSection windowWidth={windowWidth}/>
       <ReviewSection />
-      <ContactSection />
+      {/*<ContactSection />*/}
       <ContactFooter />
     </div>
   )
