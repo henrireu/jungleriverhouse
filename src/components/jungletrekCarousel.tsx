@@ -25,20 +25,14 @@ const JungleTrekCarousel = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: /*3*/ 2,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 8000,
+    arrows: false,
     responsive: [
       {
-        breakpoint: 1024, 
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        }
-      },
-      {
-        breakpoint: 600, 
+        breakpoint: 900, 
         settings: {
           slidesToShow: 1, 
           slidesToScroll: 1,
@@ -49,7 +43,7 @@ const JungleTrekCarousel = () => {
   };
   
   return (
-    <div style={{ width: '85%' }}>
+    <div style={{ width: /*'85%'*/ '90%' }}>
       <Slider {...settings}>
         <TrekCard name="Helppo 3 tunnin viidakkoretki (sis koskenlasku)" img={bird} price="55" />
         <TrekCard name="Puolenpäivän viidakkoretki 6h (sis koskenlaskun)" img={blackmonkey} price="70" />
