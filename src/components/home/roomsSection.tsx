@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 import RoomCarousel from '../roomCarousel';
+import bukitImage from '../../images/jungle-river-house-bukit.jpg';
 
 interface WindowWidthProps {
   windowWidth: number;
@@ -17,12 +18,23 @@ interface WindowWidthProps {
 const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
   return (
     <div className="bg-color1 room-container">
-      <div className="room-text">
-        <h1 className="header1">Huoneet</h1>
-        <h3 className="header2">LISÄTIETOA</h3>
-      </div>
+      <div className="text-image-container">
+        <div className="room-image-container">
+          <img src={bukitImage} alt="hotel room" className="welcome-image"/>
+        </div>
+        <div className="room-text">
+          <h1 className="header1">Huoneet</h1>
+          <p className="text1">
+          Bukit Lawangissa sijaitsevan hotellimme ensiluokkainen sijainti takaa upeat näkymät joelle ja lisäksi hotellissa on 4 tyylikästä huonetta ja perhehuone, jotka tarjoavat useita ylellisiä ja viihtyisiä mukavuuksia, kuten ruhtinaallisen unikokemuksen sekä ilmaisen Wi-Fi-yhteyden. Huoneet sijaitsevat suoraan joen rannalla ja tarjoaa upeat näkymät joen yli. Huoneessa on lasiseinä ja kauniilla omalla parvekkeella voit rentoutua ja nauttia näkymistä. Huoneissa on omat sisäänkäynti ja länsimaalaiset kylpyhuoneet sekä lämminvesisuihku ja ilmastointi.
+          </p>
+          <p className="text1">
+          Huoneemme on suunniteltu tarjoamaan persoonallinen ja viihtyisä kokemus sekä ripaus ylellisyyttä. Hotellimme on kuin oma olohuone sademetsän vieressä. Siellä voit rentoutua luonnon kohtaamispisteessä.
+          </p>
+        </div>
+      </div> 
+      {/*tee tämä osio uusiksi*/}
       {windowWidth > 1200 ? (
-        <Container>
+        <Container style={{paddingTop: 50}}>
           <Row /*xs={1} lg={2} xl={3}*/>
             <Col>
               <HomeRoom name="Blackgibbon Huone" img={blackGibbonRoom} price={"31-36"} windowWidth={windowWidth}/>

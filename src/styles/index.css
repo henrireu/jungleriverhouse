@@ -7,12 +7,12 @@ body {
 
 .bg-color1 {
   background-color: #00695C;
-  /*background-color: white;*/
+  /*background-color: #175D30;*/
 }
 
 .bg-color2 {
-  background-color: #05866e;
-  /*background-color: whitesmoke;*/ 
+  /*background-color: #05866e;*/
+  background-color: #175D30;
 }
 
 .button1 {
