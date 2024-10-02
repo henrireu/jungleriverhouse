@@ -10,7 +10,7 @@ import tiger from '../images/jungletrek/tiger.jpg';
 import monkey from '../images/jungletrek/monkey.webp';
 import orangutan from '../images/jungletrek/orangutan.jpg';
 
-import ButtonOutline from "./buttonOutline";
+import Button from "react-bootstrap/Button";
 
 import '../styles/carousels.css';
 
@@ -64,7 +64,7 @@ const JungleTrekCarousel = () => {
 const TrekCard = ({ name, img, price }: TrekCardProps) => {
   return (
     <div style={{ display: 'flex', justifyContent: 'center'}}>
-      <Card /*bg="success"*/ /*text="white"*/ className="text-center" style={{ color: '#F2F0E6', width: '80%', backgroundColor: '#00695C', border: 'none' }}>
+      <Card /*bg="success"*/ text="white" className="text-center" style={{ width: '80%', backgroundColor: '#00695C', border: 'none' }}>
         <Card.Img variant="top" src={img} style={{  }}/>
         <Card.Body>
           <Card.Title>{name}</Card.Title>
@@ -73,7 +73,7 @@ const TrekCard = ({ name, img, price }: TrekCardProps) => {
             Hinta / hlö &nbsp;<strong style={{ fontSize: 25 }}>{price} €</strong>
             </div>
           </Card.Text>
-          <ButtonOutline text="LISÄTIETOA" />
+          <Button variant="outline-light">LISÄTIETOA</Button>
         </Card.Body>
       </Card>
     </div>

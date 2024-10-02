@@ -5,11 +5,10 @@ import orangutanRoom from '../../images/rooms/orangutan-room.jpg';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-//import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 import RoomCarousel from '../roomCarousel';
-import ButtonOutline from '../buttonOutline';
 
 interface WindowWidthProps {
   windowWidth: number;
@@ -52,7 +51,7 @@ const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
 
 const HomeRoom = ({ name, img, price, windowWidth }: homeRoomProps) => {
   return (
-    <Card className="text-center" style={{ color: '#F2F0E6', backgroundColor: '#05866e', border: 'none', width: windowWidth >= 1400 ? '26rem' : '21rem'/*'24rem' : '19rem'*/, height: windowWidth >= 1400 ? '29rem' : '25rem' /*'29rem' : '23rem'*/ }}>
+    <Card className="text-center" text="white" style={{ backgroundColor: '#05866e', border: 'none', width: windowWidth >= 1400 ? '26rem' : '21rem'/*'24rem' : '19rem'*/, height: windowWidth >= 1400 ? '29rem' : '25rem' /*'29rem' : '23rem'*/ }}>
       <Card.Img variant="top" src={img} style={{ height: 300 }}/>
       <Card.Body>
         <Card.Title>{name}</Card.Title>
@@ -61,7 +60,7 @@ const HomeRoom = ({ name, img, price, windowWidth }: homeRoomProps) => {
             Hinta / yö &nbsp;<strong style={{ fontSize: 25, }}>{price} €</strong>
           </div>
         </Card.Text>
-        <ButtonOutline text="LISÄTIETOA" />
+        <Button variant="outline-light">LISÄTIETOA</Button>
       </Card.Body>
     </Card>
   );
