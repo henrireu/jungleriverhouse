@@ -33,8 +33,8 @@ const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
         </div>
       </div> 
       {/*tee tämä osio uusiksi*/}
-      {windowWidth > 1200 ? (
-        <Container style={{paddingTop: 50}}>
+      {windowWidth > 1450 ? (
+        <Container style={{paddingTop: 20}}>
           <Row /*xs={1} lg={2} xl={3}*/>
             <Col>
               <HomeRoom name="Blackgibbon Huone" img={blackGibbonRoom} price={"31-36"} windowWidth={windowWidth}/>
@@ -48,7 +48,9 @@ const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
           </Row>
         </Container>
       ) : (
-        <RoomCarousel />
+        <div style={{ width: '100%', display: 'flex', justifyContent: 'center', paddingTop: 20}}>
+          <RoomCarousel />
+        </div>
       )}
     </div>
   )

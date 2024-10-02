@@ -26,7 +26,7 @@ const RoomCarousel = () => {
     autoplaySpeed: 8000, 
     responsive: [
       {
-        breakpoint: 600, 
+        breakpoint: 900, 
         settings: {
           slidesToShow: 1, 
           slidesToScroll: 1,
@@ -37,7 +37,7 @@ const RoomCarousel = () => {
   };
 
   return (
-    <div style={{ width: '85%' }}>
+    <div style={{ width: '90%' }}>
       <Slider {...settings}>
         <RoomCard name="Blackgibbon Room" img={blackGibbonRoom} price="31-36" />
         <RoomCard name="Family Room" img={familyRoom} price="78-90" />
