@@ -11,11 +11,16 @@ import useScrollPosition from '../helpers/useScrollPosition';
 import '../styles/NavigationBarContent.css';
 import logo from '../images/logo.jpg';
 
+//import instagram from '../images/instagram.png';
+//import whatsapp from '../images/whatsapp.png';
+
 
 interface WindowWidthProps {
   windowWidth: number;
 }
 
+//tällä hetkellä tulee virheilmoitus: console.js:288 Warning: validateDOMNesting(...): <a> cannot appear as a descendant of <a>.
+// saat sen pois kun käytät buttonissa onClick ja useNavigatea eikä suoraan linkkiä
 
 const NavigationBar: React.FC<WindowWidthProps> = ({ windowWidth }) => {
   return (
@@ -115,6 +120,11 @@ const NavigationBarContent: React.FC<WindowWidthProps> = ({ windowWidth }) => {
               <Button variant="flat" size='lg'>Book Your Stay</Button>
             </Nav> 
           </Navbar.Collapse>
+          {/*logo osio */}
+          {/*<div style={{ height: 60, display: 'flex', gap: 20 }}>
+            <img src={instagram} alt="IG" style={{ height: 25, width: 25}}/>
+            <img src={whatsapp} alt="Whatsapp" style={{ height: 25, width: 25}}/>
+          </div>*/}
         </Container>
       </Navbar>
     </>
@@ -144,6 +154,7 @@ const Styles = () => {
             padding-top: 20px;
             border-bottom: 1px solid #f8f9fa;
             z-index: 1090 !important;
+            height: 80px;
           }
 
           .custom-brand {

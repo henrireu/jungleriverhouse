@@ -19,7 +19,7 @@ const RoomCarousel = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
@@ -55,9 +55,9 @@ const RoomCard = ({ name, img, price }: RoomCardProps) => {
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
             Hinta / yö &nbsp;<strong style={{ fontSize: 25 }}>{price} €</strong>
-            </div>
+            </span>
           </Card.Text>
           <Button variant="outline-light">LISÄTIETOA</Button>
         </Card.Body>

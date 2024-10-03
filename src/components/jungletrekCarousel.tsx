@@ -24,7 +24,7 @@ const JungleTrekCarousel = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
@@ -79,9 +79,9 @@ const TrekCard = ({ name, img, price }: TrekCardProps) => {
             </Card.Text>
           </div>*/}
           <Card.Text>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
             Hinta / hlö &nbsp;<strong style={{ fontSize: 25 }}>{price} €</strong>
-            </div>
+            </span>
           </Card.Text>
           <Button variant="outline-light">LISÄTIETOA</Button>
         </Card.Body>
