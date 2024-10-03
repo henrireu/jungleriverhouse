@@ -28,19 +28,13 @@
   object-fit: cover;
   border-radius: 4px;
 }
-
+ 
 .welcome-text {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  /*max-width: 800px;*/
-  /*align-items: center;*/ 
   padding-left: 50px;
-}
-
-.welcome-button {
-  margin-top: 50px;
 }
 
 /*welcome section ends*/
@@ -174,7 +168,7 @@
 
 /*review section starts*/
 
-.review-section {
+.review-container {
     display: flex;
     width: 100%;
     padding-top: 100px;
@@ -237,11 +231,6 @@
     font-size: 20px;
   }
 
-  .button-div {
-    margin-left: 10px;
-    margin-top: 10px;
-  }
-
   /*review section ends*/
 
 
@@ -273,16 +262,22 @@
   /*contact section ends*/
 
   @media (max-width: 1200px) {
-    /*.welcome-image-container {
-      display: none;
-    }*/
     .welcome-container {
+      padding-top: 70px;
+      padding-bottom: 50px;
       flex-direction: column-reverse;
       gap: 50px;
     }
 
     .whole-jungletrek-container {
+      padding-top: 50px;
+      padding-bottom: 70px;
       gap: 50px;
+    }
+
+    .room-container {
+      padding-top: 50px;
+      padding-bottom: 70px;
     }
 
     .jungletrek-image-container {
@@ -318,18 +313,9 @@
 
 
   @media (max-width: 1000px) {
-    .welcome-container {
-      padding-top: 70px;
-      padding-bottom: 70px;
-    }
 
     .junglecarousel-container {
       gap: 20px;
-    }
-
-    .room-container {
-      padding-top: 70px;
-      padding-bottom: 70px;
     }
 
     .carousel-container {
@@ -338,10 +324,6 @@
 
     .welcome-img {
       display: none;
-    }
-
-    .welcome-button {
-      margin-top: 30px;
     }
   }
 
@@ -369,10 +351,16 @@
       gap: 5px;
     }
 
-    .review-section {
+    .room-text {
+      gap: 5px;
+    }
+
+    .review-container {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
 
     .guest-say-title {
@@ -402,10 +390,6 @@
     .review-text {
       font-size: 17px;
     }
-
-    .welcome-button {
-      margin-top: 20px;
-    }
   }
   @media (max-width: 470px) {
     .carousel-container {
@@ -418,9 +402,5 @@
   
     .review-text {
       font-size: 15px;
-    }
-
-    .welcome-button {
-      margin-top: 10px;
     }
   }

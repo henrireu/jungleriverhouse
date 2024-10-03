@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 import RoomCarousel from '../roomCarousel';
-import bukitImage from '../../images/jungle-river-house-bukit.jpg';
+import bukitImage from '../../images/jungle-river-house-bukit.jpg'; 
 
 const RoomsSection = () => {
   return (
@@ -25,18 +25,10 @@ const RoomsSection = () => {
           </p>
         </div>
       </div> 
-      {/*tee tämä osio uusiksi*/}
       <RoomsContainer/>
       <div className="room-carousel-container">
         <RoomCarousel />
       </div>
-      {/*windowWidth > 1200 ? (
-        <RoomsContainer windowWidth={windowWidth}/>
-      ) : (
-        <div style={{ width: '100%', display: 'flex', justifyContent: 'center', paddingTop: 20}}>
-          <RoomCarousel />
-        </div>
-      )*/}
     </div>
   )
 }
@@ -73,19 +65,5 @@ const HomeRoom = ({ name, img, price }: homeRoomProps) => {
     </Card>
   );
 }
-
-{/*<Container style={{paddingTop: 20}}>
-          <Row>
-            <Col>
-              <HomeRoom name="Blackgibbon Huone" img={blackGibbonRoom} price={"31-36"} windowWidth={windowWidth}/>
-            </Col>
-            <Col>
-              <HomeRoom name="Perhehuone" img={familyRoom2} price={"78-90"} windowWidth={windowWidth}/>
-            </Col>
-            <Col>
-              <HomeRoom name="Orangutan Huone" img={orangutanRoom} price={"31-36"} windowWidth={windowWidth}/>
-            </Col>
-          </Row>
-        </Container>*/}
 
 export default RoomsSection;

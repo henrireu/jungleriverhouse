@@ -10,7 +10,7 @@ import '../../styles/home.css';
 
 const ReviewSection = () => {
   return (
-    <div className="review-section" style={{ backgroundColor: '#05866e'}}>
+    <div className="review-container bg-color2" /*style={{ backgroundColor: '#05866e'}}*/>
       <div className="score-section">
         <div className="score-circle">
           <p className="score-value">9.2</p>
@@ -22,8 +22,8 @@ const ReviewSection = () => {
       <div className="carousel-section">
         <h1 className="guest-say-title">Guests say: </h1>
         <ReviewCarousel />
-        <div className="button-div">
-          <Button variant="outline-light">READ FULL REVIEW</Button>
+        <div>
+          <Button variant="outline-light" style={{ marginLeft: 10}}>READ FULL REVIEW</Button>
         </div>
       </div>
     </div>
