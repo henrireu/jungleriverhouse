@@ -2,20 +2,13 @@ import blackGibbonRoom from '../../images/rooms/black-gibbon-room.jpg';
 import familyRoom2 from '../../images/rooms/familyroom2.jpg';
 import orangutanRoom from '../../images/rooms/orangutan-room.jpg';
 
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 import RoomCarousel from '../roomCarousel';
 import bukitImage from '../../images/jungle-river-house-bukit.jpg';
 
-interface WindowWidthProps {
-  windowWidth: number;
-} 
-
-const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
+const RoomsSection = () => {
   return (
     <div className="bg-color1 room-container">
       <div className="text-image-container">
@@ -33,40 +26,41 @@ const RoomsSection:React.FC<WindowWidthProps> = ({ windowWidth }) => {
         </div>
       </div> 
       {/*tee tämä osio uusiksi*/}
-      {windowWidth > 1450 ? (
-        <Container style={{paddingTop: 20}}>
-          <Row /*xs={1} lg={2} xl={3}*/>
-            <Col>
-              <HomeRoom name="Blackgibbon Huone" img={blackGibbonRoom} price={"31-36"} windowWidth={windowWidth}/>
-            </Col>
-            <Col>
-              <HomeRoom name="Perhehuone" img={familyRoom2} price={"78-90"} windowWidth={windowWidth}/>
-            </Col>
-            <Col>
-              <HomeRoom name="Orangutan Huone" img={orangutanRoom} price={"31-36"} windowWidth={windowWidth}/>
-            </Col>
-          </Row>
-        </Container>
+      <RoomsContainer/>
+      <div className="room-carousel-container">
+        <RoomCarousel />
+      </div>
+      {/*windowWidth > 1200 ? (
+        <RoomsContainer windowWidth={windowWidth}/>
       ) : (
         <div style={{ width: '100%', display: 'flex', justifyContent: 'center', paddingTop: 20}}>
           <RoomCarousel />
         </div>
-      )}
+      )*/}
     </div>
   )
 }
 
-  interface homeRoomProps {
-    name: string;
-    img: string;
-    price: string;
-    windowWidth: number;
-  }
-
-const HomeRoom = ({ name, img, price, windowWidth }: homeRoomProps) => {
+const RoomsContainer = () => {
   return (
-    <Card className="text-center" text="white" style={{ backgroundColor: '#05866e', border: 'none', width: windowWidth >= 1400 ? '26rem' : '21rem'/*'24rem' : '19rem'*/, height: windowWidth >= 1400 ? '29rem' : '25rem' /*'29rem' : '23rem'*/ }}>
-      <Card.Img variant="top" src={img} style={{ height: 300 }}/>
+    <div className="room-card-container">
+      <HomeRoom name="Blackgibbon Huone" img={blackGibbonRoom} price={"31-36"} />
+      <HomeRoom name="Perhehuone" img={familyRoom2} price={"78-90"} />
+      <HomeRoom name="Orangutan Huone" img={orangutanRoom} price={"31-36"} />
+    </div>
+  )
+}
+
+interface homeRoomProps {
+  name: string;
+  img: string;
+  price: string;
+}
+
+const HomeRoom = ({ name, img, price }: homeRoomProps) => {
+  return (
+    <Card className="text-center" text="white" style={{ backgroundColor: '#05866e', border: 'none', /*width: '32rem', height: '32rem'*/ width: '90%' }}>
+      <Card.Img variant="top" src={img} style={{ maxHeight: 400 }}/>
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>
@@ -79,5 +73,19 @@ const HomeRoom = ({ name, img, price, windowWidth }: homeRoomProps) => {
     </Card>
   );
 }
+
+{/*<Container style={{paddingTop: 20}}>
+          <Row>
+            <Col>
+              <HomeRoom name="Blackgibbon Huone" img={blackGibbonRoom} price={"31-36"} windowWidth={windowWidth}/>
+            </Col>
+            <Col>
+              <HomeRoom name="Perhehuone" img={familyRoom2} price={"78-90"} windowWidth={windowWidth}/>
+            </Col>
+            <Col>
+              <HomeRoom name="Orangutan Huone" img={orangutanRoom} price={"31-36"} windowWidth={windowWidth}/>
+            </Col>
+          </Row>
+        </Container>*/}
 
 export default RoomsSection;

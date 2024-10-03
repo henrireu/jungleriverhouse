@@ -28,7 +28,7 @@ const App = () => {
       {/*<Home windowWidth={windowWidth}/>*/}
 
       <Routes>
-        <Route path="/" element={<Home windowWidth={windowWidth} />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/rooms" element={<Rooms />} />
       </Routes>

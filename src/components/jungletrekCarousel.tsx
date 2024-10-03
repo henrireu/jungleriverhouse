@@ -73,6 +73,11 @@ const TrekCard = ({ name, img, price }: TrekCardProps) => {
         <Card.Img variant="top" src={img} style={{ maxHeight: 400 }}/>
         <Card.Body>
           <Card.Title>{name}</Card.Title>
+          {/*<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            <Card.Text>
+              Hinta / hlö &nbsp;<strong style={{ fontSize: 25 }}>{price} €</strong>
+            </Card.Text>
+          </div>*/}
           <Card.Text>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
             Hinta / hlö &nbsp;<strong style={{ fontSize: 25 }}>{price} €</strong>

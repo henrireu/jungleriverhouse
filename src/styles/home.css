@@ -56,7 +56,7 @@
   padding-left: 3rem;
   padding-right: 3rem;
   padding-top: 100px;
-  padding-bottom: 140px;
+  padding-bottom: 100px;
   width: 100%;
 }
 
@@ -122,8 +122,20 @@
   padding-left: 3rem;
   padding-right: 3rem;
   padding-top: 100px;
-  padding-bottom: 150px;
+  padding-bottom: 100px;
   gap: 50px;
+}
+
+.room-card-container {
+  display: flex;
+  width: 100%;
+  gap: 5%;
+  justify-content: center;
+}
+
+.room-carousel-container {
+  width: 100%;
+  display: none;
 }
 
 .room-image-container {
@@ -282,6 +294,14 @@
       gap: 50px;
     }
 
+    .room-card-container {
+      display: none;
+    }
+
+    .room-carousel-container {
+      display: block;
+    }
+
     .room-image-container {
       display: none;
     }
@@ -309,7 +329,7 @@
 
     .room-container {
       padding-top: 70px;
-      padding-bottom: 110px;
+      padding-bottom: 70px;
     }
 
     .carousel-container {
