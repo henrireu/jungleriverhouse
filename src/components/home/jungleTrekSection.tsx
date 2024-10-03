@@ -27,7 +27,7 @@ const JungleTrekSection = () => {
       </div>
       <div className="junglecarousel-container">
         <h1 className="header1">Viidakkoretket</h1>
-        <JungleTrekCarousel />
+        <JungleTrekCarousel /> 
       </div>
     </div>
   )

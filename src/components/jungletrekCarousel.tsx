@@ -25,17 +25,28 @@ const JungleTrekCarousel = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: /*3*/ 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 8000,
-    arrows: false,
     responsive: [
       {
-        breakpoint: 900, 
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2, 
+        }
+      },
+      {
+        breakpoint: 850,
+        settings: {
+          slidesToShow: 2,
+          arrows: false
+        }
+      },
+      {
+        breakpoint: 600, 
         settings: {
           slidesToShow: 1, 
-          slidesToScroll: 1,
           arrows: false
         }
       },
@@ -43,7 +54,7 @@ const JungleTrekCarousel = () => {
   };
   
   return (
-    <div style={{ width: /*'85%'*/ '90%' }}>
+    <div style={{ width: /*'90%'*/ '100%' }}>
       <Slider {...settings}>
         <TrekCard name="Helppo 3 tunnin viidakkoretki (sis koskenlasku)" img={bird} price="55" />
         <TrekCard name="Puolenpäivän viidakkoretki 6h (sis koskenlaskun)" img={blackmonkey} price="70" />
@@ -52,14 +63,14 @@ const JungleTrekCarousel = () => {
         <TrekCard name="Erikoistarjous kahdelle henglelle - 1 yö huoneessa + kahden päivän ja yhden yön viidakkoretki" img={orangutan} price="260" />
       </Slider>
     </div>
-  );
+  ); 
 }
   
 const TrekCard = ({ name, img, price }: TrekCardProps) => {
   return (
     <div style={{ display: 'flex', justifyContent: 'center'}}>
-      <Card /*bg="success"*/ text="white" className="text-center" style={{ width: '80%', backgroundColor: '#00695C', border: 'none' }}>
-        <Card.Img variant="top" src={img} style={{  }}/>
+      <Card /*bg="success"*/ text="white" className="text-center" style={{ width: '90%', backgroundColor: '#00695C', border: 'none' }}>
+        <Card.Img variant="top" src={img} style={{ maxHeight: 400 }}/>
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>

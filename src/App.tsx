@@ -9,10 +9,8 @@ import Video from './components/backgroundVideo';
 import Rooms from './components/rooms/rooms';
 import TopOfVideoContent from './components/topOfVideoContent';
 
-import instagram from './images/instagram.png';
-import whatsapp from './images/whatsapp.png';
-
-// react slickin karousellit menee sekaisin kun ne käärii diviin
+//import instagram from './images/instagram.png';
+//import whatsapp from './images/whatsapp.png';
 
 const App = () => {
   const windowWidth = useWidth();
@@ -26,7 +24,7 @@ const App = () => {
           <TopOfVideoContent windowWidth={windowWidth}/>
         </div>
       </div>
-      <Logos />
+      {/*<Logos />*/}
       {/*<Home windowWidth={windowWidth}/>*/}
 
       <Routes>
@@ -38,7 +36,7 @@ const App = () => {
   )
 }
 
-const Logos = () => {
+/*const Logos = () => {
   return (
     <div className="fixed-logo">
       <a href="https://www.instagram.com/jungleriverhouse/" target="_blank" rel="noopener noreferrer">
@@ -47,6 +45,6 @@ const Logos = () => {
       <img className="logo-img" src={whatsapp} alt="whatsapp logo" />
     </div>
   )
-}
+}*/
 
 export default App
