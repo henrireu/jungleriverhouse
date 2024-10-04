@@ -1,4 +1,4 @@
-import '../../styles/roompage.css';
+import '../../styles/roomPage.css';
 import ContactFooter from '../../components/contactFooter';
 
 import orangutanImage from '../../assets/images/rooms/orangutan-room.jpg';
