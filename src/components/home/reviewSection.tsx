@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 
 import '../../styles/carousels.css';
 import '../../styles/home.css';
-
+ 
 const ReviewSection = () => {
   return (
     <div className="review-container bg-color2" /*style={{ backgroundColor: '#05866e'}}*/>
@@ -42,7 +42,7 @@ const ReviewCarousel = () => {
   };
   
   return (
-    <div className="carousel-container">
+    <div className="review-carousel-container">
       <Slider {...settings}>
         <ReviewCard name="Lindy K, Spain" review="“The room is located just above the river bank and u have to cross a suspension bridge to get there. Nice view of the river and the forest. The main rain forest is touching the boundry of the lodge. It takes just about ten minutes to get in to the thick forest. The staff so friendly and helpful. We had the 2-day jungle trek with Jungle River house team, it was fantastic, we saw a lot of orangutans and other monkeys, the track was a great experience a lot more challenged that we expected. We could recommend this place for sure..”"/>
         <ReviewCard name="RIIKKA, FINLAND" review="“It was an amazing experience. We did 2 days jungle trek. The orang utan tour and the accommodation with jungle river house is excellent. We saw so many animals and the guides did an awesome job. We would 100% reccomend the package because it was unforgettable experience.”"/>

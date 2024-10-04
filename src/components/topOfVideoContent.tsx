@@ -11,9 +11,9 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-import blackGibbonRoom from '../images/rooms/black-gibbon-room.jpg';
-import familyRoom from '../images/rooms/family-room.webp';
-import orantuganRoom from '../images/rooms/orangutan-room.jpg';
+import blackGibbonRoom from '../assets/images/rooms/black-gibbon-room.jpg';
+import familyRoom from '../assets/images/rooms/family-room.webp';
+import orantuganRoom from '../assets/images/rooms/orangutan-room.jpg';
 
 
 interface WindowWidthProps {

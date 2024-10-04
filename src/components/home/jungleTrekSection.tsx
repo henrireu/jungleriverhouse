@@ -2,7 +2,7 @@
 import Button from 'react-bootstrap/Button';
 
 //import bird from '../../images/jungletrek/bird.webp';
-import blackmonkey from '../../images/jungletrek/blackmonkey.webp';
+import blackmonkey from '../../assets/images/jungletrek/blackmonkey.webp';
 //import tiger from '../../images/jungletrek/tiger.jpg';
 //import monkey from '../../images/jungletrek/monkey.webp';
 //import orangutan from '../../images/jungletrek/orangutan.jpg';

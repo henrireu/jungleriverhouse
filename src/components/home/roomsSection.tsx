@@ -1,12 +1,14 @@
-import blackGibbonRoom from '../../images/rooms/black-gibbon-room.jpg';
-import familyRoom2 from '../../images/rooms/familyroom2.jpg';
-import orangutanRoom from '../../images/rooms/orangutan-room.jpg';
+import blackGibbonRoom from '../../assets/images/rooms/black-gibbon-room.jpg';
+import familyRoom2 from '../../assets/images/rooms/familyroom2.jpg';
+import orangutanRoom from '../../assets/images/rooms/orangutan-room.jpg';
+
+import bukitImage from '../../assets/images/jungle-river-house-bukit.jpg'; 
 
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 import RoomCarousel from '../roomCarousel';
-import bukitImage from '../../images/jungle-river-house-bukit.jpg'; 
+
 
 const RoomsSection = () => {
   return (
@@ -51,7 +53,7 @@ interface homeRoomProps {
 
 const HomeRoom = ({ name, img, price }: homeRoomProps) => {
   return (
-    <Card className="text-center" text="white" style={{ backgroundColor: '#05866e', border: 'none', /*width: '32rem', height: '32rem'*/ width: '90%' }}>
+    <Card className="text-center" text="white" style={{ backgroundColor: '#05866e', border: 'none', width: '90%' }}>
       <Card.Img variant="top" src={img} style={{ maxHeight: 400 }}/>
       <Card.Body>
         <Card.Title>{name}</Card.Title>

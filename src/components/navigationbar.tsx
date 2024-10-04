@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 import useScrollPosition from '../helpers/useScrollPosition';
 import '../styles/NavigationBarContent.css';
-import logo from '../images/logo.jpg';
+import hotelLogo from '../assets/images/logos/hotel-logo.jpg';
 
 //import instagram from '../images/instagram.png';
 //import whatsapp from '../images/whatsapp.png';
@@ -54,7 +54,7 @@ const NavigationBarContent: React.FC<WindowWidthProps> = ({ windowWidth }) => {
           <Navbar.Brand className="text-light custom-brand">
             <img
               alt=""
-              src={logo}
+              src={hotelLogo}
               //width="30"
               //height="30"
               className="d-inline-block align-top custom-image"

@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-import homeVideo from '../videos/background.mp4';
-import roomsVideo from '../videos/rooms-background3.mp4';
+import homeVideo from '../assets/videos/background.mp4';
+import roomsVideo from '../assets/videos/rooms-background.mp4';
 
-import homePoster from '../images/posters/homePoster.png';
-import roomsPoster from '../images/posters/roomsPoster.png';
+import homePoster from '../assets/images/posters/homePoster.png';
+import roomsPoster from '../assets/images/posters/roomsPoster.png';
 
 import '../styles/video.css';
 

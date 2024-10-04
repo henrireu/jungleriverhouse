@@ -4,11 +4,11 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Card from 'react-bootstrap/Card';
 
-import bird from '../images/jungletrek/bird.webp';
-import blackmonkey from '../images/jungletrek/blackmonkey.webp';
-import tiger from '../images/jungletrek/tiger.jpg';
-import monkey from '../images/jungletrek/monkey.webp';
-import orangutan from '../images/jungletrek/orangutan.jpg';
+import bird from '../assets/images/jungletrek/bird.webp';
+import blackmonkey from '../assets/images/jungletrek/blackmonkey.webp';
+import tiger from '../assets/images/jungletrek/tiger.jpg';
+import monkey from '../assets/images/jungletrek/monkey.webp';
+import orangutan from '../assets/images/jungletrek/orangutan.jpg';
 
 import Button from "react-bootstrap/Button";
 

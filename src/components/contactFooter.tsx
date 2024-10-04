@@ -1,4 +1,4 @@
-import tripadvisor from '../images/trip-advisor.png';
+import tripadvisor from '../assets/images/logos/trip-advisor.png';
 
 const ContactFooter = () => {
   return (

@@ -9,6 +9,21 @@ const ButtonOutline = ({ text }: ButtonProps) => {
     <>
       <style type="text/css">
         {`
+          .btn-outline-light {
+            font-family: "Epilogue", sans-serif;
+          }
+        `}
+      </style>
+      <Button variant="outline-light">{text}</Button>
+    </>
+  )
+}
+
+/*const ButtonOutline = ({ text }: ButtonProps) => {
+  return (
+    <>
+      <style type="text/css">
+        {`
           .btn-outline-warning {
             background-color: transparent;
             color: #F2F0E6;
@@ -29,6 +44,6 @@ const ButtonOutline = ({ text }: ButtonProps) => {
       <Button variant="outline-warning" style={{ }}>{text}</Button>
     </>
   )
-}
+}*/
 
 export default ButtonOutline;

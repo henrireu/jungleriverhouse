@@ -5,9 +5,9 @@ import "slick-carousel/slick/slick-theme.css";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-import blackGibbonRoom from '../images/rooms/black-gibbon-room.jpg';
-import familyRoom from '../images/rooms/familyroom2.jpg';
-import orangutanRoom from '../images/rooms/orangutan-room.jpg';
+import blackGibbonRoom from '../assets/images/rooms/black-gibbon-room.jpg';
+import familyRoom from '../assets/images/rooms/familyroom2.jpg';
+import orangutanRoom from '../assets/images/rooms/orangutan-room.jpg';
 
 interface RoomCardProps {
   img: string;

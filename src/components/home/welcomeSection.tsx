@@ -1,7 +1,7 @@
 //import ButtonOutline from "../buttonOutline";
 import Button from 'react-bootstrap/Button';
 
-import bukitimg from '../../images/jungle-river-house-bukit.jpg';  
+import bukitimg from '../../assets/images/jungle-river-house-bukit.jpg';  
 
 const Welcome = () => {
   return (
