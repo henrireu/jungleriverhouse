@@ -1,11 +1,13 @@
 import { useState } from 'react';
+
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
+
+import { Link, useNavigate } from 'react-router-dom';
 
 import useScrollPosition from '../helpers/useScrollPosition';
 import '../styles/NavigationBarContent.css';
@@ -31,8 +33,7 @@ const NavigationBar: React.FC<WindowWidthProps> = ({ windowWidth }) => {
 }
 
 const NavigationBarContent: React.FC<WindowWidthProps> = ({ windowWidth }) => {
-  // koska NavBar onToggle ei toimi odotetusti niin täytyy selvittää manuaalisesti näytön leveys
-
+  const navigate = useNavigate();
   //scroll position täytyy selvittää myös manuaalisesti
   const scrollPosition = useScrollPosition();
 
@@ -85,7 +86,7 @@ const NavigationBarContent: React.FC<WindowWidthProps> = ({ windowWidth }) => {
                     onMouseEnter={() => setShowRoomMenu(true)}
                     onMouseLeave={() => setShowRoomMenu(false)}
                   >
-                    <Dropdown.Item>Orangutan Room</Dropdown.Item>
+                    <Dropdown.Item onClick={() => navigate('/rooms/orangutan-room')}>Orangutan Room</Dropdown.Item>
                     <Dropdown.Item>Black Gibbon Room</Dropdown.Item>
                     <Dropdown.Item>Family Room</Dropdown.Item>
                   </DropdownButton>

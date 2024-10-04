@@ -1,12 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+
+import Home from './pages/home';
+import OrangutanRoom from './pages/rooms/orangutanRoom';
 
 import NavigationBar from "./components/navigationbar";
 import useWidth from "./helpers/useWidth";
-import Home from './components/home/home';
+import ScrollToTop from './components/scrollToTop';
 import AboutUs from './components/aboutUs';
 
 import Video from './components/backgroundVideo';
-import Rooms from './components/rooms/rooms';
+import Rooms from './pages/rooms';
 import TopOfVideoContent from './components/topOfVideoContent';
 
 //import instagram from './images/instagram.png';
@@ -17,22 +20,44 @@ const App = () => {
 
   return (
     <Router>
+      <MainContainer windowWidth={windowWidth} />
+      {/*<Logos />*/}
+
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/rooms" element={<Rooms />} />
+        <Route path="/rooms/:name" element={<OrangutanRoom />} />
+      </Routes>
+    </Router>
+  )
+}
+
+interface WindowWidthProps {
+  windowWidth: number;
+}
+
+const MainContainer = ({ windowWidth }: WindowWidthProps) => {
+  const location = useLocation();
+  const currentPath = location.pathname;
+
+  if (currentPath === '/' || currentPath === '/rooms') {
+    return (
       <div className="video-container">
-        <Video />
+        <div className={currentPath === '/' ? 'background-img1' : 'background-img2'}>
+          <Video />
+        </div>
         <div className="content-overlay">
           <NavigationBar windowWidth={windowWidth}/>
           <TopOfVideoContent windowWidth={windowWidth}/>
         </div>
       </div>
-      {/*<Logos />*/}
-      {/*<Home windowWidth={windowWidth}/>*/}
+    )
+  } 
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/rooms" element={<Rooms />} />
-      </Routes>
-    </Router>
+  return (
+    <NavigationBar windowWidth={windowWidth}/>
   )
 }
 

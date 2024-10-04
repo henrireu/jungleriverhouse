@@ -4,6 +4,12 @@ body {
   /*font-family: 'Gowun Batang', serif;*/
   font-family: "Epilogue", sans-serif;
 }
+
+.main-container {
+  position: relative; /* Varmistaa, että lapsielementit voivat olla suhteellisia */
+  background-color: #00695C;
+  z-index: 1;
+}
  
 .bg-color1 {
   background-color: #00695C;

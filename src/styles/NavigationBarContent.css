@@ -1,6 +1,6 @@
 .menu-container {
   position: relative;
-}
+} 
   
 .menu-container:hover .MuiPaper-root {
   display: block;

@@ -1,8 +1,8 @@
-import JungleTrekSection from './jungleTrekSection';
-import ReviewSection from './reviewSection';
-import ContactFooter from '../contactFooter';
-import Welcome from './welcomeSection';
-import RoomsSection from './roomsSection';
+import JungleTrekSection from '../components/home/jungleTrekSection';
+import ReviewSection from '../components/home/reviewSection';
+import ContactFooter from '../components/contactFooter';
+import Welcome from '../components/home/welcomeSection';
+import RoomsSection from '../components/home/roomsSection';
 //import ContactSection from './contactSection';
 
 const Home = () => {

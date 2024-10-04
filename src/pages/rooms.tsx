@@ -1,6 +1,6 @@
 import Card from "react-bootstrap/Card";
 
-import ContactFooter from "../contactFooter";
+import ContactFooter from "../components/contactFooter";
 
 const Rooms = () => {
   return (

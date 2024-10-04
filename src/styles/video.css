@@ -8,6 +8,30 @@
     object-fit: cover;
     overflow: hidden;
   }
+
+  .background-img1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/images/posters/homePoster.png'); /* Aseta taustakuva posterista */
+    background-size: cover; /* Varmistaa, että kuva peittää koko alueen */
+    background-position: center; /* Keskittää kuvan */
+    z-index: 0; /* Varmistaa, että se on videon alla */
+  }
+
+  .background-img2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/images/posters/roomsPoster.png'); /* Aseta taustakuva posterista */
+    background-size: cover; /* Varmistaa, että kuva peittää koko alueen */
+    background-position: center; /* Keskittää kuvan */
+    z-index: 0; /* Varmistaa, että se on videon alla */
+  }
   
   .video-bg {
     position: absolute;
@@ -21,6 +45,17 @@
     transform: translate(-50%, -50%);
     background-size: cover;
     filter: brightness(70%); /* Lisää tummuutta videon päälle paremman luettavuuden takaamiseksi */
+  }
+
+  .image-container {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    /*height: 600px;*/ 
+    /*height: 80vh;*/
+    height: 100vh;
+    object-fit: cover;
+    overflow: hidden;
   }
   
   .content-overlay {
